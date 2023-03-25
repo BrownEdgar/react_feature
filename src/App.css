@@ -1,5 +1,7 @@
-div {
-	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px;
-	margin: 50px auto;
-	padding: 2rem;
+button{
+    margin:29px;
+    font-size:28px;
+}
+h1{
+ margin-left:150px;
 }
