@@ -1,0 +1,38 @@
+[
+    {
+        "id":1,
+        "image":"./images/img1.avif",
+        "price": "$50",
+        "title": "Bake Cupcakes"
+    },
+    {
+        "id":2,
+        "image":"./images/img2.avif",
+        "price": "$50",
+        "title": "Bake Cupcakes"
+    },
+    {
+        "id":3,
+        "image":"./images/img3.avif",
+        "price": "$50",
+        "title": "Bake Cupcakes"
+    },
+    {
+        "id":4,
+        "image":"./images/img4.avif",
+        "price": "$50",
+        "title": "Cake Torte"
+    },
+    {
+        "id":5,
+        "image":"./images/img5.avif",
+        "price": "$50",
+        "title": "Cake Torte"
+    },
+    {
+        "id":6,
+        "image":"./images/img6.avif",
+        "price": "$50",
+        "title": "Cake Torte"
+    }
+]
