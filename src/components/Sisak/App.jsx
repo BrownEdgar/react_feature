@@ -1,5 +1,5 @@
-import React,{useState} from 'react'
-import './App.css'
+import React, { useState } from 'react'
+
 
 export default function App() {
 	const [count, setCount] = useState(0)
@@ -15,9 +15,9 @@ export default function App() {
 	return (
 		<div>
 			<h1>{count}</h1>
-			<button onClick = {handleClick1}>+</button>
-			 <button onClick = {handleClick2}>-</button>
-			<button onClick = {handleClick3}>Reset</button>
+			<button onClick={handleClick1}>+</button>
+			<button onClick={handleClick2}>-</button>
+			<button onClick={handleClick3}>Reset</button>
 		</div>
 	)
 }
