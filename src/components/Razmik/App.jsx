@@ -22,5 +22,4 @@ export default function App() {
 			 <button onClick={handleClick2}>-</button>
 			<button onClick={handleClick3}>Reset</button>
 		</div>
-	)
-}
+	)}
