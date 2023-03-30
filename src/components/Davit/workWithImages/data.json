@@ -1,0 +1,44 @@
+[{
+        "id": 1,
+        "title": "Mercedes-Benz CLS review",
+        "image": "https://www.topgear.com/sites/default/files/2021/06/BEH_2091.jpg?w=892&h=502",
+        "description": "It was with the first-generation CLS that Mercedes claims to have pioneered the concept of a car that “combines the elegance and dynamism of a coupé with the comfort and functionality of a saloon”. In other words, a swoopier alternative to a traditional saloon, or a marginally more practical alternative to a two-door coupe."
+    },
+    {
+        "id": 2,
+        "title": "Mercedes-Benz GLC review",
+        "image": "https://www.topgear.com/sites/default/files/2023/01/1%20Mercedes%20GLC.jpg?w=892&h=502",
+        "description": "It certainly wouldn’t be an overstatement to say that the GLC is crucially important to Mercedes – perhaps its most important car. Why’s that? Because since it first went on sale in 2015 it has rather swiftly climbed its way to the number one position on the Mercedes sales chart until it’s become the firm’s global best-seller. Who’d have thunk it, eh?"
+    },
+    {
+        "id": 3,
+        "title": "Mercedes-Benz AMG C63 review",
+        "image": "https://www.topgear.com/sites/default/files/2022/12/1%20Mercedes%20AMG%20C63.jpg?w=892&h=502",
+        "description": "Speak to the engineers at AMG and you’ll hear a story of a performance car maker morphing into a technology brand. It’s in that context that the brand-new C63 begins to make sense. Otherwise this is a car that’s going to take some wrapping our heads around. Gone is a hulking great V8, taking with it both a simple link to the rear axle and the ‘eloquent muscle car’ vibe of C63s old. What takes their place is writ large in a new suffix – this is the Mercedes-AMG C63 S E Performance, and it’s a hybrid."
+    },
+    {
+        "id": 4,
+        "title": "Mercedes-Benz EQS SUV review",
+        "image": "https://www.topgear.com/sites/default/files/2022/09/22C0308_035.jpg?w=892&h=502",
+        "description": "As the EQS relates to the regular stone-age S-Class, and the EQE to the E-Class, say hello to the EQS SUV: the first full-size off-roader based on Mercedes’ pure electric ‘EVA2’ architecture. Its analogue in the old world is the GLS, an unfairly overlooked vehicle in the luxury car world. Mind you, the Mercedes range – with its panoply of models and designations – is so sprawling it’s easy to lose one or two down the back of the sofa. It would need to be a big sofa, though. The GLS is huge."
+    },
+    {
+        "id": 5,
+        "title": "Mercedes-Benz S-Class review",
+        "image": "https://www.topgear.com/sites/default/files/2022/03/1-Mercedes-S-Class-plug-in.jpg?w=892&h=502",
+        "description": "It’s impossible not to think of the previous six generations of Mercedes S-Class as you approach this seventh iteration. Think of them and pity such piffling technological world firsts as anti-lock brakes (1978, on the W116) or airbags (1981’s W126). Remember the awe you experienced the first time you saw a car with double-glazed windows (1991’s W140 behemoth)?"
+    },
+    {
+        "id": 6,
+        "title": "Mercedes-Benz G-Class review",
+        "image": "https://www.topgear.com/sites/default/files/2022/01/1-Mercedes-G-Class.jpg?w=892&h=502",
+        "description": "The door handle button, the headlight washer nozzles, the sun visors and the spare wheel cover. That’s a comprehensive list of the parts that have been carried over from the old G-Class. Apparently there’s a bracket underneath that also has the same part number as before, but even the engineers can’t remember quite where it is. Everything else – everything – is new."
+    },
+    {
+        "id": 7,
+        "title": "Mercedes-Benz GLE review",
+        "image": "https://www.topgear.com/sites/default/files/2021/08/Large-32636-Mercedes-BenzGLE.jpg?w=892&h=502",
+        "description": "This is the latest Mercedes-Benz GLE, only the second Mercedes SUV to wear the name but in fact the latest in a line of successful Benz 4x4s that trace their roots back to the M-Class of 1997. Mercedes proudly says it invented the premium SUV class, but conveniently skips the part about BMW’s X5 and Volvo’s XC90 making a better fist of it in the intervening couple of decades."
+    }
+
+]
