@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-import App from './components/Edgar/workWIthImages/App';
-
+import App from './components/Edgar/Hooks/useEffect/App'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);

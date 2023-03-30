@@ -1,0 +1,44 @@
+[
+	{
+		"id": 1,
+		"image": "./Images/Armani1.jpg" ,
+		"description": "Armani Exchange embodies the youthful spirit of a new generation. A|X takes a playful, urban approach to apparel and accessories. Launched in 1991, A|X retails fashion and lifestyle. Targeted as the more accessible Armani brand, it is inspired by street-chic culture and dance music.",
+		"price": "240",
+		"title": "Watch Armani Exchange"
+	},
+	{
+		"id": 2,
+	  "image": "./Images/Timex2.jpg",
+		"description": "Stylish watch for everyday wear. Nothing superfluous - only style, accuracy and comfort. Expedition Field. Chronograph watch with a tachymeter in a round case. Stopwatch with 1/20s accuracy. Hour and minute hands with partially removed metal.",
+		"price": "415",
+    "title": "Watch Timex Expedition"
+	},
+	{
+		"id": 3,
+		"image": "./Images/Mamba3.jpg",
+		"description": "A brilliant watch with striking design, this quality automatic Black Mamba by Pionier delivers an essence of first class sophistication, with amazing details and sturdy construction. The fancy bezel face adds...",
+		"price": "200",
+    "title": "Watch Mamba"
+	},
+	{
+		"id": 4,
+		"image": "./Images/Montblanc4.jpg",
+		"description": "Although Montblanc in recent years has developed a fairly impressive reputation for a value-driven approach to complicated Swiss watchmaking, the brand isn't afraid to pull out the horological big guns every so often. And that's exactly what we've seen at Watches & Wonders 2021.",
+		"price": "320",
+    "title": "Watch Montblanc" 
+	},
+	{
+		"id": 5,
+		"image": "./Images/Rolex5.jpg",
+		"description": "Rolex presents the new generation of its Oyster Perpetual watches and brings a new model to the range, the Oyster Perpetual 41, as well as versions of the Oyster Perpetual 36 displaying dials in vivid colours. The light reflections on the case sides highlight the elegant profile of the Oyster case, which is made from Oystersteel.",
+		"price": "550",
+		"title": "Watch Rolex Oyster Perpetual" 
+	},
+	{
+		"id": 6,
+		"image": "Seiko6",
+		"description": "The latest Speedtimer chronograph takes inspiration from Seiko's first stopwatch designed for timing winter sports. As the official timing device at a major sporting event held in Sapporo in 1972, the original stopwatch’s features were tailored for winter conditions.",
+		"price": "170",
+		"title": "Watch Seiko Prospex" 
+	}
+]
