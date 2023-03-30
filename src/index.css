@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 h1{
     text-align: center;
@@ -8,7 +9,7 @@ h1{
     justify-content: center;
 }
 
-button{
+/* button{
 	padding: 13px 23px;
 	font-weight: 700;
 	font-size: 18px;
@@ -17,4 +18,6 @@ button{
 	background-color: rgb(255, 208, 69);
 	border: 2px solid #353535;
 	border-radius: 12px;
-}
+} */
+=======
+>>>>>>> fac60bd97a93eccb551fc3b430e986019211ac36

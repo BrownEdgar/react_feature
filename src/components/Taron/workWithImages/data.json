@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "image": "./images/image1.avif",
+        "description": "Цена: 20.000₽ 100ml",
+        "title": "JO MALONE LONDON",
+        "production": "Производство: Великобритания",
+        "year": "Год производства: 2016",
+        "firm": "Торговый дом: Jo Malone",
+        "buy": "Купить"
+
+        
+    },
+    {
+        "id": 2,
+        "image": "./images/image2.avif",
+        "description": "Цена: 9000₽ 100ml",
+        "title": "HUGO BOSS",
+        "production": "Производство: Германия",
+        "year": "Год производства: 2017",
+        "firm": "Торговый дом: Hugo Boss",
+        "buy": "Купить"
+    },
+    {
+        "id": 3,
+        "image": "./images/image3.avif",
+        "description": "Цена: 37.000 100ml",
+        "title": "BVLGARI",
+        "production": "Производство: Италия",
+        "year": "Год производства: 2019",
+        "firm": "Торговый дом: Bvlgari",
+        "buy": "Купить"
+    },
+    {
+        "id": 1,
+        "image": "./images/image4.avif",
+        "description": "Цена: 15.000₽ 100ml",
+        "title": "CHANEL COCO NOIR",
+        "production": "Производство: Франция",
+        "year": "Год производства: 2012",
+        "firm": "Торговый дом: Chanel",
+        "buy": "Купить"
+    },
+    {
+        "id": 1,
+        "image": "./images/image5.avif",
+        "description": "Цена: 22.000₽ 100ml",
+        "title": "CHRISTIAN DIOR SAVAGE",
+        "production": "Производство: Франция",
+        "year": "Год производства: 2015",
+        "firm": "Торговый дом: Christian Dior",
+        "buy": "Купить"
+    },{
+        "id": 1,
+        "image": "./images/image6.avif",
+        "description": "Цена: 9000₽ 100ml",
+        "title": "JAGUAR",
+        "production": "Производство: Великобритания",
+        "year": "Год производства: 2009",
+        "firm": "Торговый дом: Jaguar",
+        "buy": "Купить"
+    }
+]
