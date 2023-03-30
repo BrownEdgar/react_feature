@@ -20,7 +20,7 @@ export default function App() {
 			<h1>{count}</h1>
 			<button onClick ={handleClick1}>+</button>
 			 <button onClick={handleClick2}>-</button>
-			<button onClick={handleClick3}>Remove</button>
+			<button onClick={handleClick3}>Reset</button>
 		</div>
 	)
 }
