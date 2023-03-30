@@ -8,6 +8,10 @@ export default function Product({product , handleDelete}) {
         <img src={product.image} alt="{`product-${product.id}`}" />
         <h3 className={style.container}>{product.title}</h3>
         <p>{product.description}</p>
+        <p>{product.production}</p>
+        <p>{product.year}</p>
+        <p>{product.firm}</p>
+        <button>{product.buy}</button>
     </div>
   )
 }
