@@ -1,26 +1,31 @@
 import React, { useState } from 'react'
-import data from './data.json'
+import data from "./data.json"
 import Product from './Product/Product'
+
 import style from "./App.module.css"
 
 export default function App() {
-	const [products, setproducts] = useState(data)
+	const [products, setProducts] = useState(data);
+
 	const handleDelete = (id) => {
-		const f = products.filter(product => product.id !== id);
-		setproducts(f)
+		const f = products.filter(product => product.id != id);
+		console.log(f)
+		setProducts(f)
 	}
 
 	return (
 		<div className={style.container}>
-			{products.length > 0
-				? (
+			{
+			products.length > 0 
+			? (
 					products.map((elem) => {
 						return <Product product={elem} key={elem.id} handleDelete={handleDelete} />
 					})
-
-				)
-				: <h1>Product list is empty</h1>}
-
-
-		</div>)
+			)
+			: <h1>No data!</h1>
+			}
+		</div>
+	)
 }
+
+
