@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Posts from './Posts/Posts';
-//import MyLoader from './Loader/MyLoader';
-
+import MyLoader from './Loader/MyLoader';
 import "./App.scss"
+
+
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 export default function App() {
@@ -26,7 +27,7 @@ export default function App() {
 	return (
 		<div className='container'>
 			{isLoading 
-			? <h2>Loading ...</h2>
+			? <MyLoader />
 			: <Posts posts={value}/>
 		}
 		</div>
