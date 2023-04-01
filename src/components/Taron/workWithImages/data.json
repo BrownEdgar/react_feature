@@ -51,7 +51,11 @@
         "firm": "Торговый дом: Christian Dior",
         "buy": "Купить"
     },{
+<<<<<<< HEAD
+        "id": 6,
+=======
         "id":6,
+>>>>>>> 0b457d81703fcc0136630c450667d8deaeb2b3ef
         "image": "./images/image6.avif",
         "description": "Цена: 9000₽ 100ml",
         "title": "JAGUAR",
