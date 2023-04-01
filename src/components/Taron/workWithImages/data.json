@@ -32,7 +32,7 @@
         "buy": "Купить"
     },
     {
-        "id": 1,
+        "id": 4,
         "image": "./images/image4.avif",
         "description": "Цена: 15.000₽ 100ml",
         "title": "CHANEL COCO NOIR",
@@ -42,7 +42,7 @@
         "buy": "Купить"
     },
     {
-        "id": 1,
+        "id": 5,
         "image": "./images/image5.avif",
         "description": "Цена: 22.000₽ 100ml",
         "title": "CHRISTIAN DIOR SAVAGE",
@@ -51,7 +51,7 @@
         "firm": "Торговый дом: Christian Dior",
         "buy": "Купить"
     },{
-        "id": 1,
+        "id": 6,
         "image": "./images/image6.avif",
         "description": "Цена: 9000₽ 100ml",
         "title": "JAGUAR",
