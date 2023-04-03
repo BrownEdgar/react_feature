@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import "./Posts.scss"
+
 
 export default function Posts({posts}) {
   return (
@@ -7,10 +9,12 @@ export default function Posts({posts}) {
         {posts.map((elem,index)=>{
             return(
                 <div key={index} >
-                    <h2>{elem.userId}</h2>
                     <h2>{elem.id}</h2>
                     <h2>{elem.title}</h2>
                     <h2>{elem.body}</h2>
+		<button className='btn_delete' onClick={()=>setisOpen(true)}>delete</button>
+
+					<hr />
                 </div>
             )
         })}

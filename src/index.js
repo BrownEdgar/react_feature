@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 
-import App from './components/Davit/Posts/App';
+import App from './components/Davit/Modal/App';
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
