@@ -5,7 +5,7 @@ const API_KEY = process.env.REACT_APP_API_KEY
 export default function App() {
     const [data, setdata] = useState([])
     useEffect(()=>{
-        fetch(`${API_KEY}/posts`)
+        fetch(`${API_KEY}`)
       .then(response => response.json())
       .then(json => setdata(json))
     },[])
