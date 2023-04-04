@@ -8,7 +8,7 @@ export default function App() {
   const [products, setProducts] = useState(data)
 
   const handleDelete = (id) => {
-    const f = products.filter(product => product.id != id)
+    const f = products.filter(product => product.id !== id)
     setProducts(f)
   }
   return (
