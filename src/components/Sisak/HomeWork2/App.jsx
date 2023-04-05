@@ -5,13 +5,21 @@ import Watch from './Watch/Watch';
 import style from "./App.module.css"
 
 export default function App() {
-	const [watches, setwatches] = useState(data)
-	return (
+	const [watches, setWatches] = useState(data);
+	const handleDelete = (id) => {
+		const f = watches.filter(watch => watch.id !== id);
+		setProducts(f)
+	 }
+	 
+	 return (
 		<div className={style.container}>
-			<h1 className={style.title}>Watches</h1>
-			{watches.map((elem) => {
-				return <Watch watch={elem} key={elem.id}/>
-			})}
+
+			{watches.length > 0
+			? (
+				watches.map((elem) => {
+				return <Watch watch={elem} key={elem.id} handleDelete={handleDelete}/>
+			}))
+		  : <h1>Այ ախպեր սաղ ջնջել ես, էլ ինչին ես սպասում?</h1>}
 		</div>
 	)
 }
