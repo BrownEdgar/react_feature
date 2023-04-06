@@ -5,7 +5,7 @@ export default function Product({product , handleDelete}) {
   return (
     <div className={style.Product}>
         {/* <span className={style.btn_delete} onClick={() => handleDelete(product.id)}>X</span> */}
-        <span className={style.btn_delete} onClick={() => handleDelete(product.id)}>delete</span>
+        <span class="material-symbols-outlined" >close</span>
         <div className={style.imgbox}>
         <img src={product.image} alt={`product-${product.id}`} />
         <p className={style.price}>{product.price}</p>
