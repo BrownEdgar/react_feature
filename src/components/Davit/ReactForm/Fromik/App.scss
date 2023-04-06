@@ -1,0 +1,24 @@
+form{
+    & > div {
+        width: 100%;
+        
+        label{
+            font-weight: 700;
+            display: block;
+            margin-bottom: 10px;
+            color: rgb(227, 136, 25);
+            font-variant: small-caps;
+            
+            
+        }
+        input{
+            padding: 1rem;
+            width: 100%;
+            border-radius: 12px;
+            margin: 10px auto;
+            font-size: 22px;
+            
+             
+        }
+    }
+}
