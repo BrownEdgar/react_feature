@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.App{
+    width: 50%;
+    margin: 350px auto;
+    text-align: center;
+    line-height: 25px;
+    .alert{
+        width: 350px;
+        height: 120px;
+        padding: 16px 30px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 10;
+        right: 10px;
+        border-radius: 16px;
+        transition: 0.5s;
+        transform: scale(0);
+        opacity: 0;
+        background-color: green;
+        &.show{
+            transition: 0.5;
+            transform: scale(1);
+            opacity: 1;
+        }
+        p{
+            text-shadow: 1px 1px 1px;
+            font-size: 22px;
+            color: black;
+        }
+    }
+    h1{
+        font-size: 40px;
+    }
+    .error{
+        color: red;
+        position: relative;
+        top: -3px;
+        font-size: 20px;
+        padding: 3px;
+        // display: inline-block;
+        font-weight: 600px;
+        left: 8px;
+    }
+        p{
+            margin: 20px;
+            color: gray;
+            font-size: 20px;
+        }
+        input{
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+        &[type="submit"]{
+            background-color: rgb(3, 153, 3);
+            color: white;
+            cursor: pointer;
+            margin: 10px;
+            border-color: transparent;
+            width: 110px;
+        }
+    }
+}
