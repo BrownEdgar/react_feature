@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(90deg, #dbc5c5, #444);
+
+  form {
+    width: 50%;
+    padding: 1rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    & > div {
+      width: 90%;
+      margin: 10px auto;
+      label {
+        font-weight: 700;
+        display: block;
+        margin-bottom: 10px;
+        color: #fff;
+        font-variant: small-caps;
+      }
+      input {
+        padding: 1rem;
+        width: 100%;
+        border-radius: 12px;
+        border: none;
+        margin: 10px auto;
+        font-size: 22px;
+        &:focus {
+          outline: none;
+        }
+        &[type="submit"] {
+          background-color: rgb(72, 74, 72);
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
