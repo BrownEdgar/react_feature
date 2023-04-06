@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.posts{
+    // width: 400px;
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 20px;
+    border: 2px solid #000;
+    font-size: 12px;
+    
+}
+.btn_delete{
+    width: 70px;
+    padding: 12px;
+    margin-top: 16px;
+    background-color: #ff0158;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    position: relative;left: 1430px ; 
+
+}
