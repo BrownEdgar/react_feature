@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import Modal from "./Modal";
-import "./App.scss"
-
+import "./App.scss";
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -22,7 +21,8 @@ export default function App() {
 
   return (
     <div>
-      {isOpen && (<Modal>
+      {isOpen && (
+        <Modal>
           <div className="Modal-Content w-100">
             <h2>Are you sure?</h2>
             <button onClick={() => setIsOpen(false)}>Cancel</button>
@@ -30,8 +30,11 @@ export default function App() {
               onClick={() => {
                 setIsOpen(false);
                 handleDelete(deleteItemId);
-                setDeleteItemId(null);
-              }}>Delete</button>
+                setDeleteItemId(0);
+              }}
+            >
+              Delete
+            </button>
           </div>
         </Modal>
       )}
@@ -40,16 +43,22 @@ export default function App() {
         <div className="wrapper">
           <ul className="first">
             {data.map((user) => (
-              <li>{user.name}
-                <button className="btn_delete" onClick={() => {
+              <li>
+                {user.name}
+                <button
+                  className="btn_delete"
+                  onClick={() => {
                     setIsOpen(true);
                     setDeleteItemId(user.id);
-                  }}>X</button>
+                  }}
+                >
+                  X
+                </button>
               </li>
             ))}
           </ul>
         </div>
       )}
     </div>
-  )
+  );
 }
