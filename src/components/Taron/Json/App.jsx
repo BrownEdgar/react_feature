@@ -5,51 +5,51 @@ import "./App.scss"
 
 
 export default function App() {
-  const [data, setData] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
-  const [divShow, setDivShow] = useState(true);
-  const [deleteItemId, setDeleteItemId] = useState(0);
+	const [data, setData] = useState([]);
+	const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((json) => setData(json));
-  }, []);
+	const [deleteItemId, setDeleteItemId] = useState(0);
 
-  const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id));
-  };
+	useEffect(() => {
+		fetch("https://jsonplaceholder.typicode.com/users?_limit=5")
+			.then((response) => response.json())
+			.then((json) => setData(json));
+	}, []);
 
-  return (
-    <div>
-      {isOpen && (<Modal>
-          <div className="Modal-Content w-100">
-            <h2>Are you sure?</h2>
-            <button onClick={() => setIsOpen(false)}>Cancel</button>
-            <button
-              onClick={() => {
-                setIsOpen(false);
-                handleDelete(deleteItemId);
-                setDeleteItemId(null);
-              }}>Delete</button>
-          </div>
-        </Modal>
-      )}
+	const handleDelete = (id) => {
+		setData(data.filter((item) => item.id !== id));
+	};
 
-      {divShow && (
-        <div className="wrapper">
-          <ul className="first">
-            {data.map((user) => (
-              <li>{user.name}
-                <button className="btn_delete" onClick={() => {
-                    setIsOpen(true);
-                    setDeleteItemId(user.id);
-                  }}>X</button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </div>
-  )
+	return (
+		<div>
+			{isOpen && (<Modal>
+				<div className="Modal-Content w-100">
+					<h2>Are you sure?</h2>
+					<button onClick={() => setIsOpen(false)}>Cancel</button>
+					<button
+						onClick={() => {
+							setIsOpen(false);
+							handleDelete(deleteItemId);
+							setDeleteItemId(null);
+						}}>Delete</button>
+				</div>
+			</Modal>
+			)}
+
+
+			<div className="wrapper">
+				<ul className="first">
+					{data.map((user) => (
+						<li>{user.name}
+							<button className="btn_delete" onClick={() => {
+								setIsOpen(true);
+								setDeleteItemId(user.id);
+							}}>X</button>
+						</li>
+					))}
+				</ul>
+			</div>
+
+		</div>
+	)
 }
