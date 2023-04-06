@@ -1,9 +1,10 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+ 
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import App from './components/Arusik/ReactFormHomework/App.jsx';
 
-import App from './components/Garnik/Hooks/tnayin4/App';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
