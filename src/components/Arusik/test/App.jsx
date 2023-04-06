@@ -13,7 +13,7 @@ export default function App({}) {
   const [selectedUser, setSelectedUser] = useState(0);
   const [divShow, setDivShow] = useState(true);
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch("")
       .then((response) => response.json())
       .then((json) => setData(json));
   }, []);

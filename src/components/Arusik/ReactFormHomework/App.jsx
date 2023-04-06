@@ -7,6 +7,7 @@ let count = 0
 export default function App() {
     const [users , setUsers] = useState([])
     const [notification , setNotification] = useState(false)
+    const [error , setError] = useState(false)
 
 
         const handleSubmit = (e) =>{
@@ -21,12 +22,22 @@ export default function App() {
         if(user.length === 0){
             setUsers([user])
         } else{
-            setUsers(...users,user)
+            setUsers([...users,user])
         }
         setNotification(true)
         setTimeout(setNotification , 3000 , false)
         e.target.reset()
         }
+
+        const handleBlur = (e) => { 
+            const {value:email} = e.target;
+            const emailExist = users.some(user => user.email.toLowerCase() === email.toLowerCase());
+            if (emailExist) {
+              setError(true)
+            }else{
+              setError(false)
+            }
+          }
         
   return (
     <div className='App'>
@@ -50,6 +61,7 @@ export default function App() {
                 name='email' 
                 id='email' 
                 placeholder='Email'
+                onBlur={handleBlur} 
                 required/>
 
             <input type="submit" value="Send"  />
