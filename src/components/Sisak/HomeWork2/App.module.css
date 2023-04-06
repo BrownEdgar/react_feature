@@ -4,8 +4,20 @@
 	margin: 0;
 }
 
-.container{
+.container {
 	max-width: 1140px;
 	margin: 20px auto;
 	border: 1px solid rgb(89, 255, 0);
+	height: 400px;
+	padding: 1rem;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.title {
+	text-decoration: underline;
+	font-variant: small-caps;
+	color: orange;
+}
+.price::after {
+	content: "$"
 }

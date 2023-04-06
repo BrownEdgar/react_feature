@@ -1,8 +1,9 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-import App from './components/Garnik/Hooks/useEffect/ReactForm/App';
+import App from './components/Garnik/Hooks/tnayin4/App';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

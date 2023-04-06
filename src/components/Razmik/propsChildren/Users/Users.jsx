@@ -7,7 +7,7 @@ import './Users.scss'
 export default function Users({users,handleDelete}) {
     const [isOpen, setIsOpen] = useState(false)
     const [select,setSelect] = useState(null)
-	const openDeleteModal = (id,e)=>{
+	const openDeleteModal = (id)=>{
         setIsOpen(true)
         setSelect(id)
     }
@@ -32,7 +32,7 @@ export default function Users({users,handleDelete}) {
                 <h3 className='Users__name'>{user.name}</h3>
 				<h4 className ='Users__username'>{user.username}</h4>
                 <p className='Users__email'>{user.email}</p>
-                <button className='Users__Delete' onClick={(e) =>openDeleteModal(user.id,e)}>Delete</button>
+                <button className='Users__Delete' onClick={() =>openDeleteModal(user.id)}>Delete</button>
                    
 				</div>
 					)
