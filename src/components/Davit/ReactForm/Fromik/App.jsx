@@ -1,4 +1,4 @@
-import React from 'react'
+import React  from 'react'
 import "./App.scss"
 import {useFormik} from 'formik'
 import * as yup from "yup"
@@ -19,31 +19,45 @@ const validationSchema = yup.object({
   email : yup
   .string()
   .email()
+  .required(),
+  confirmPwd: yup.string()
   .required()
+  .oneOf([yup.ref('password')], 'Passwords does not match'),
+  
 })
 
 
 export default function App() {
+
 const formik = useFormik({
   initialValues : {
     username:"",
     password:"",
-    email:""
+    email:"",
+    confirmPwd: ""
+    
   },
   onSubmit:(values)=>{
     console.log(values);
   },
   validationSchema
 })
-// console.log(formik.touched);
-
 
   return (
-    <div>
-        <form onSubmit={formik.handleSubmit}>
-            <div>
-            <label htmlFor="username">username</label>
-            <input 
+  <div className='App'>
+      <div className='firstPart'>
+        <h2 className='content1'>
+        HTML CSS <nav></nav> 
+        Registration  <nav></nav>
+        Form <nav></nav>
+        Template   </h2>
+        <h2 className="content2">JOIN US</h2>
+      </div>
+    <div className='secondPart'>
+    <form onSubmit={formik.handleSubmit}>
+     <div>
+         <input 
+         placeholder='Username'
               type="text" 
               name='username'
               id='username' 
@@ -51,10 +65,21 @@ const formik = useFormik({
               onBlur={formik.handleBlur}
               />
               {(formik.touched.username && formik.errors.username)? <p className='errors'>{formik.errors.username}</p>:null}
-            </div>
-            <div>
-            <label htmlFor="password">password</label>
+      </div>
+        <div>
             <input 
+         placeholder='Email'
+              type="email"  
+              name='email'
+              id='email'
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}/>
+              {( formik.touched.email  && formik.errors.email)? <p className='errors'>{formik.errors.email}</p>:null}
+
+        </div>
+            <div>
+            <input 
+         placeholder='Password'
               type="text"  
               name='password'
               id='password'
@@ -64,20 +89,22 @@ const formik = useFormik({
 
             </div>
             <div>
-            <label htmlFor="email">email</label>
             <input 
-              type="email"  
-              name='email'
-              id='email'
+         placeholder='Confirm Password'
+
+              type="text"  
+              name='confirmPwd'
+              id='confirmPwd'
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}/>
-              {( formik.touched.email  && formik.errors.email)? <p className='errors'>{formik.errors.email}</p>:null}
+              {( formik.touched.confirmPwd  && formik.errors.confirmPwd)? <p className='errors'>{formik.errors.confirmPwd}</p>:null}
 
             </div>
             <div>
-              <input type="submit" value="save" />
+              <input type="submit" value="Submit" />
             </div>
         </form>
     </div>
+  </div>
   )
 }
