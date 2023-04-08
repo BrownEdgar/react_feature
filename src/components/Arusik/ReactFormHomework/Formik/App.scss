@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.App{
+    width: 50%;
+    // margin: 350px auto;
+    text-align: center;
+    line-height: 25px;
+    }
+        .errors{
+            color: red;
+        }
+        input{
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+        &[type="submit"]{
+            background-color: rgb(3, 153, 3);
+            color: white;
+            cursor: pointer;
+            margin: 10px;
+            border-color: transparent;
+            width: 110px;
+        }
+    }
