@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
  
 
-import App from './components/Arusik/ReactFormHomework/App.jsx';
+import App from './components/Davit/ContactUS/App';
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
