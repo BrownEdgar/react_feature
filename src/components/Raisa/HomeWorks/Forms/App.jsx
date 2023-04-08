@@ -33,8 +33,17 @@ export default function App() {
     const emailExist = users.some(
       (user) => user.email.toLowerCase() === email.toLowerCase()
     );
+<<<<<<< HEAD
 		setError(emailExist);
 
+=======
+    if (emailExist) {
+      setError(true);
+      setNotification(false);
+    } else {
+      setError(false);
+    }
+>>>>>>> 5f774298292f7e755ec842eb4b55e1453c9a880a
   };
 
   return (
