@@ -25,7 +25,6 @@ export default function App() {
       username: "",
       password: "",
       email: "",
-      confirmPwd: "",
     },
     onSubmit: (values) => {
       console.log(values);
