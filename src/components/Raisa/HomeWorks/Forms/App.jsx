@@ -35,6 +35,7 @@ export default function App() {
     );
     if (emailExist) {
       setError(true);
+      setNotification(false);
     } else {
       setError(false);
     }
