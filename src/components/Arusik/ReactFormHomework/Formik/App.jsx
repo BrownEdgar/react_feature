@@ -1,8 +1,13 @@
 import React from 'react'
-import { useFormik } from 'formik'
+import { useFormik , Formik, Form, Field, ErrorMessage} from 'formik'
 import * as yup from "yup"
 
 import "./App.scss"
+const initialValues = {
+    username: '',
+    password: '',
+    email: ''
+},
 
 const validationSchema = yup.object({
     username: yup
@@ -25,11 +30,6 @@ const validationSchema = yup.object({
 
 export default function App() {
     const formik = useFormik({
-        initialValues: {
-            username: '',
-            password: '',
-            email: ''
-        },
         onSubmit:(values) =>{
             console.log(values)
         },
