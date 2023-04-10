@@ -4,19 +4,18 @@ import "./App.scss"
 let count = 0;
 export default function App() {
 const [users, setUsers] = useState ([])
-const [notification, SetNotification] = useState(false)
+const [notification, setNotification] = useState(false)
 const [error, SetError] = useState(false)
 
 
   const handleSubmit = (e) => { 
     e.preventDefault()
-    const { username, Name, Email } = e.target;
-
+		const { 	username,  email } = e.target;
+		console.log(username, email)
     const user = {
         id: ++count,
         username: username.value,
-        Name: Name.value,
-        Email: Email.value,
+			  email: email.value,
     }
 
     if (users.length === 0) {
@@ -26,9 +25,9 @@ const [error, SetError] = useState(false)
     }
     
 
-    setNotification(true),
-    setTimeout(SetNotification, 3000, false),
-    e.target.reset();//karoxa jnjvi
+    setNotification(true);
+    setTimeout(setNotification, 3000, false);
+		
 
   }
 
@@ -57,11 +56,11 @@ const [error, SetError] = useState(false)
                 {error && <p className='error'>this email alredy exist</p>}
             </div>
             <div className='div-1'>
-                <label htmlFor="username">Email</label>
-                <input type="text"  name='username' id='username' required/>
+                <label htmlFor="email">Email</label>
+					<input type="text" name='email' id='email' required/>
             </div>
             <div>
-                <input className='input' type="submit" value="SEND" />
+                <input  type="submit" value="SEND" />
             </div>
             
 

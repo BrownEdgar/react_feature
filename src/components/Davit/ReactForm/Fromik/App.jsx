@@ -1,4 +1,4 @@
-import React  from 'react'
+import React ,{useState} from 'react'
 import "./App.scss"
 import {useFormik} from 'formik'
 import * as yup from "yup"
@@ -28,7 +28,7 @@ const validationSchema = yup.object({
 
 
 export default function App() {
-
+const [data, setData] = useState([])
 const formik = useFormik({
   initialValues : {
     username:"",
@@ -37,8 +37,9 @@ const formik = useFormik({
     confirmPwd: ""
     
   },
-  onSubmit:(values)=>{
-    console.log(values);
+  onSubmit:(values, {resetForm})=>{
+    setData([...data,values]);
+		resetForm()
   },
   validationSchema
 })
