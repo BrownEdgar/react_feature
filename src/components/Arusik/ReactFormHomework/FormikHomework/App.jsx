@@ -3,34 +3,24 @@ import { useFormik } from 'formik'
 import * as yup from "yup"
 
 import "./App.scss"
-const validationSchema = yup.object({
-    username: yup
-    .string()
-    .min(3)
-    .matches(/^[A-Z]/, "username must started with uppercase!")
-    .required(),
-    email: yup
-    .string()
-    .required()
-    .email(),
-    password: yup
-    .string()
-    .matches(/[A-Z]/)
-    .required()
-    .min(6)
-    .max(18)
-    .matches(/\d/, "number"),
-    confirmpassword: yup 
-    .string()
-    // .matches(/[A-Z]/)
-    // .required()
-    // .min(6)
-    // .max(18)
-    // .matches(/\d/, "number")
-    .test('passwords-match', 'Passwords must match', function(value) {
-        return this.parent.password === value;
-    })
-})
+// const validationSchema = yup.object({
+//     username: yup
+//     .string()
+//     .min(3)
+//     .matches(/^[A-Z]/, "username must started with uppercase!")
+//     .required(),
+//     email: yup
+//     .string()
+//     .required()
+//     .email(),
+//     password: yup
+//     .string()
+//     .matches(/[A-Z]/)
+//     .required()
+//     .min(6)
+//     .max(18)
+//     .matches(/\d/, "number"),
+// })
 let count = 0
 export default function App() {
     const [users , setUsers] = useState([])
@@ -43,27 +33,22 @@ export default function App() {
             password: '',
             confirmpassword: ''
         },
-        onSubmit:(values) =>{
+        // onSubmit:(values) =>{
+        //     console.log(values)
+        // },
+        onSubmit:(values, {resetForm}) =>{
             console.log(values)
-        },
-        validationSchema,
-    })
-    const handleSubmit = (e) =>{
-        e.preventDefault()
-        const { username , email} = e.target
-
-        const user = {
-            id: ++count,
-            username: username.value,
-            email: email.value,
-        }
-        if(user.lenght === 0){
-            setUsers([user])
-        }else{
+            const user = {
+                id: ++count,
+                ...values
+            }
             setUsers([...users, user])
+            resetForm()
         }
-        e.target.reset()
-    }
+        // validationSchema ,
+    })
+    
+    
 
   return (
     <div className='Main'>
@@ -78,7 +63,7 @@ export default function App() {
         </div>
         <div className='App'>
             <div className='Info'>
-            <form onSubmit={handleSubmit} >
+            <form onSubmit={formik.handleSubmit} >
             <div>
                 <input 
                 type="text" 

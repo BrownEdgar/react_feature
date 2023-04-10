@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
  
 
-import App from './components/Arusik/ReactFormHomework/FormikHomework/App.jsx';
+import App from './components/Arusik/ReactFormHomework/FormHomework2/App.jsx';
 
 
 
