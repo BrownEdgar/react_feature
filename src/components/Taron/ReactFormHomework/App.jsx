@@ -43,8 +43,9 @@ export default function App() {
                 <p>User saved!</p>
             </div>
             <h1>Contact Us</h1>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt obcaecati cupiditate aperiam modi deleniti aut sequi culpa provident doloremque. Odio quibusdam totam atque.</p>
             <form onSubmit={handleSubmit}>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt obcaecati cupiditate aperiam modi deleniti aut sequi culpa provident doloremque. Odio quibusdam totam atque.</p>
+          
             <input type="text" name="name" id="name" placeholder="Name" required/>
             <input type="text" name="email" id="email" placeholder='Email' required onBlur={handleBlur}/>
             {error && <h4 className='error'>This email alrady exist! Please choose another.</h4>}

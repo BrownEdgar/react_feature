@@ -95,6 +95,8 @@ export default function App() {
 				id="email" 
 				placeholder="Your email" 
 				onBlur={formik.handleBlur}
+
+				onChange={formik.handleChange} 
 				value={formik.values.email} />
 				{(formik.touched.email && formik.errors.email) ? <p className="errors">{formik.errors.email}</p> : null}
 				<label htmlFor="email">Email</label>
@@ -121,9 +123,7 @@ export default function App() {
 				{(formik.touched.confirmPassword && formik.errors.confirmPassword)? <p className="errors">{formik.errors.password}</p> : null}
 				<label htmlFor="password">Confirm Password</label>
 			</div>
-				<input 
-				type="submit" 
-				value="Submit" />
+				<input type="submit" value="Submit" />
 			</form>
 			 </div>
 			</div>
