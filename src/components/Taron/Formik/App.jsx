@@ -38,30 +38,19 @@ export default function App() {
             password: '',
             confirmpassword: ''
         },
-        onSubmit:(values) =>{
+        onSubmit:(values, formik ) =>{
             console.log(values)
+					const user = {
+						id: ++count,
+						...values,
+					}
+					setUsers([...users, user])
+					formik.resetForm()
         },
         validationSchema,
     })
 
-    const handleSubmit = (e) =>{
-        e.preventDefault()
-        const { username , email , password , confirmpassword } = e.target
 
-        const user = {
-            id: ++count,
-            username: username.value,
-            email: email.value,
-            password: password.value,
-            confirmpassword: confirmpassword.value
-        }
-        if(user.lenght === 0){
-            setUsers([user])
-        }else{
-            setUsers([...users, user])
-        }
-        e.target.reset()
-    }
 
   return (
     <div className='Main'>
@@ -76,7 +65,7 @@ export default function App() {
         </div>
         <div className='App-right'>
             <div className='Info-right'>
-            <form onSubmit={handleSubmit} >
+            <form onSubmit={formik.handleSubmit} >
             <div>
                 <input 
                 type="text" 

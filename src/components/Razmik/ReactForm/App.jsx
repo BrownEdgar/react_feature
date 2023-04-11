@@ -23,7 +23,7 @@ export default function App() {
         }
         setNotification(true);
         setTimeout(setNotification,2000,false)
-        
+
      }
      const handleBlur = (e)=>{
         const {value:email} = e.target

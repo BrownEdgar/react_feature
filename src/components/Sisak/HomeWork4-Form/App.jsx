@@ -11,7 +11,7 @@ export default function App() {
 		e.preventDefault();
 		const {name, email} = e.target;
 		const user = {
-			id: ++ count,
+			id: ++count,
 			name: name.value,
 			email: email.value,
 		}
@@ -52,7 +52,7 @@ export default function App() {
 					placeholder="Email"
 					onBlur={handleBlur}
 					required
-					 />
+					 />	
 					 <input type="submit" value="SEND" />
 				</div>
 					 {error && <p className="error" >This email is already exist!</p>}

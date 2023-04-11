@@ -2,13 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
+<<<<<<< HEAD
 import App from './components/Razmik/Formik/Formik_2/App';
+=======
+>>>>>>> a15468840dbecb155ba00d49898f51e792adffd2
 
- 
+import App from "./components/Garnik/Hooks/tnayin/App"
 
-// import App from './components/Arusik/ReactFormHomework/FormikHomework/App.jsx';
 
-// >>>>>>> ebae3db8ae6c9767a2afcfce89c7f181a26ffc51
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
