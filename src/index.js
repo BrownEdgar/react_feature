@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
-import App from './components/Razmik/Formik/App';
+import App from './components/Razmik/Formik/Formik_2/App';
 
  
 

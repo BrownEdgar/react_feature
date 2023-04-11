@@ -3,8 +3,27 @@ import {Formik,Form,Field,ErrorMessage} from 'formik'
 import * as Yup from 'yup'
 import './App.scss'
 
-export default function App() {
+const initialValues ={ username: '', email: '', password:'', confirmPassword:'' }
+const validationSchema = Yup.object({
+    username: Yup.string()
+      .min(3)
+      .max(15)
+      .required('Required'),
+    email: Yup.string()
+      .email('Invalid email address')
+      .required('Required'),
+    password: Yup.string().min(6).max(18).required('Required'),
+    confirmPassword: Yup.string().oneOf([Yup.ref('password'), null], 'Passwords must match')
+  })
+  
+  export default function App() {
     const [users, setUsers] = useState([])
+    const handleSubmit = (values,{resetForm}) =>{
+    setUsers([...users,values])
+    console.log(values)
+    resetForm()
+  }
+
 return (
     <div className='container'>
             <div className='content'>
@@ -15,23 +34,13 @@ return (
                 <h2>Join Us</h2>
             </div>
         <div className='form'>
-            <Formik className = 'formik' 
-                initialValues={{ username: '', email: '', password:'', confirmPassword:'' }}
-                validationSchema={Yup.object({
-                    username: Yup.string()
-                      .min(3)
-                      .max(15)
-                      .required('Required'),
-                    email: Yup.string()
-                      .email('Invalid email address')
-                      .required('Required'),
-                    password: Yup.string().min(6).max(18).required('Required'),
-                    confirmPassword: Yup.string().oneOf([Yup.ref('password'), null], 'Passwords must match')
-                  })}
-                  onSubmit={(values) => {
-                    console.log(values)
-                  }} 
-                  >
+                <Formik className = 'formik' 
+                    initialValues={initialValues}
+                    validationSchema={validationSchema}
+                    onSubmit={handleSubmit}
+                    validateOnChange= {false}
+                    validateOnBlur  = {true} 
+                >
              <Form>
                 <Field
                     type = "text" 
