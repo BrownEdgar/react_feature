@@ -1,0 +1,36 @@
+.Modal {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.813);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.Modal-Content {
+  background-color: aliceblue;
+  width: 400px;
+  padding: 1rem;
+  min-height: 200px;
+  color: #303030;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+.Modal-Content.w-100 {
+  width: 100%;
+  background: #111;
+  color: #fff;
+  border-radius: 0;
+}
+.Modal button {
+  padding: 10px 20px;
+  margin: 15px;
+  background-color: navajowhite;
+  border-radius: 10px;
+  min-width: 150px;
+  cursor: pointer;
+}/*# sourceMappingURL=Modal.css.map */

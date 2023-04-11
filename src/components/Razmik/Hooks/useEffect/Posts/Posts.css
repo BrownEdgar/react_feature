@@ -1,0 +1,30 @@
+.Posts {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+}
+.Posts__Item {
+  border: 2px solid grey;
+  box-shadow: rgba(244, 244, 249, 0.625) 0px 13px 27px -5px, rgba(23, 22, 97, 0.581) 0px 8px 16px -8px;
+  border-radius: 12px;
+  flex: 0 0 100%;
+  padding: 1rem;
+  transition: 0.3s;
+}
+.Posts__Item:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  transform: scale(1.03) translateY(-3px);
+  background-image: linear-gradient(90deg, #116802, #519602);
+  box-shadow: none;
+}
+.Posts__Title {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.Posts__Body {
+  line-height: 1.6;
+  text-indent: 15px;
+}/*# sourceMappingURL=Posts.css.map */
