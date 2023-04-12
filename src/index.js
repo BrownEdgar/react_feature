@@ -1,17 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import { BrowserRouter as Router } from "react-router-dom";
 
-<<<<<<< HEAD
-import App from './components/Razmik/Formik/Formik_2/App';
-=======
->>>>>>> a15468840dbecb155ba00d49898f51e792adffd2
 
-import App from "./components/Garnik/Hooks/tnayin/App"
+import App from "./components/Razmik/Reaccrt-router-6/App"
 
 
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<App />);
+root.render(
+<Router>
+    <App />
+</Router>);
