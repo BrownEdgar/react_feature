@@ -8,7 +8,6 @@ import App from './components/Taron/React-router-6/App.jsx';
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-    <Router>
-        <App />
-    </Router>
-);
+<Router>
+    <App />
+</Router>);
