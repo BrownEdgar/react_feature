@@ -16,8 +16,8 @@ export default function App() {
             <Formik 
             initialValues={{ firstName: '', lastName: '', email: '', website: '', message: '' }}
             onSubmit={(values, {resetForm}) => {
-							const user = { id: ++count, ...values }
-							setUsers([...users, user])
+                const user = {id: ++count, ...values}
+                setUsers([...users, user])
                 resetForm()
             }}
             >
