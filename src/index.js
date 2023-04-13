@@ -7,7 +7,6 @@ import App from './components/Ruben/React-router-6/App';
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-    <Router>
-        <App />
-    </Router>
-);
+<Router>
+    <App />
+</Router>);
