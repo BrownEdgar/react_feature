@@ -1,17 +1,13 @@
-@import  '../sass/colors.scss';
-
 header {
 	width: 100%;
 	padding: 10px;
 	height: 80px;
-	background-image: $backgroundColor;
+	background-color: #010607;
 	color: #fff;
-	
 	nav{
 		margin-left: auto;
-		width: 40%;
+		width: 50%;
 		height: 100%;
-		
 
 		ul {
 			list-style-type: none;

@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ROUTES from '../routes/ROUTES'
-
 import "./Navbar.scss"
 
 export default function Navbar() {
@@ -10,19 +8,19 @@ export default function Navbar() {
 			<nav>
 				<ul>
 					<li>
-						<Link to={ROUTES.HOME}>Home</Link>
+						<Link to="/">Home</Link>
 					</li>
 					<li>
-						<Link to={ROUTES.BLOG}>Blog</Link>
+						<Link to="/signup">SignUp</Link>
 					</li>
 					<li>
-						<Link to={ROUTES.POSTS}>Posts</Link>
+						<Link to="/signIn">SignIn</Link>
 					</li>
 					<li>
-						<Link to={ROUTES.SIGNIN}>Sign In</Link>
+						<Link to="/blog">Blog</Link>
 					</li>
 					<li>
-						<Link to={ROUTES.SIGNUP}>Sign Up</Link>
+						<Link to="/posts">Posts</Link>
 					</li>
 				</ul>
 			</nav>
