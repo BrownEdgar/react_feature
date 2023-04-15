@@ -1,0 +1,24 @@
+@import './sass/colors.scss';
+
+
+body{
+    background-image: $backgroundColor;
+}
+.App{
+    text-align: center;
+   
+h1{
+        margin-bottom: 20px;
+        color:$contentColor;
+    }
+
+    .btn-link{
+        padding: 0.6rem;
+        font-size:18px;
+        font-weight: 700;
+        color:black;
+        border-radius: 12px;
+        width: 150px;
+        border:1px solid gray;
+    }
+}
