@@ -8,19 +8,21 @@ export default function Navbar() {
 			<nav>
 				<ul>
 					<li>
-						<Link to="/">Home</Link>
+						<Link to={ROUTES.HOME}>Home</Link>
 					</li>
 					<li>
-						<Link to="/signup">SignUp</Link>
+						<Link to={ROUTES.SIGNUP}>SignUp</Link>
 					</li>
 					<li>
-						<Link to="/signIn">SignIn</Link>
+						<Link to={ROUTES.SIGNIN}>SignIn</Link>
 					</li>
 					<li>
-						<Link to="/blog">Blog</Link>
+						<Link to={ROUTES.BLOG}>Blog</Link>
 					</li>
 					<li>
-						<Link to="/posts">Posts</Link>
+						<Link to={ROUTES.POSTS}>Posts</Link>
+					</li>		<li>
+						<Link to={ROUTES.ABOUT}>About</Link>
 					</li>
 				</ul>
 			</nav>
