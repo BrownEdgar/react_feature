@@ -33,9 +33,9 @@ const validationSchema = yup.object({
 export default function App() {
 
 	const [data, setData] = useState([])
-	const handleSubmit = (values) => {
+	const handleSubmit = (values, {resetForm}) => {
 		setData([...data, values]);
-		console.log(values.firstname);
+		resetForm()
 	}
 	return (
 		<div className="App">
@@ -46,8 +46,7 @@ export default function App() {
 				validateOnChange={true}
 				validateOnBlur={true}
 				onSubmit={handleSubmit}>
-				{(formik) => {
-					return (
+
 						<Form>
 							<div className="Registr">
 								<div className="Firstname">
@@ -79,8 +78,6 @@ export default function App() {
 								<input type="submit" value="SUBMIT" className="Submit" />
 							</div>
 						</Form>
-					)
-				}}
 			</Formik>
 
 		</div>
