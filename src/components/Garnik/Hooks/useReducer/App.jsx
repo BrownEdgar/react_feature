@@ -4,20 +4,35 @@ import { initialState, reducer } from './reducer'
 export default function App() {
 
 	const[state, dispatch] = useReducer(reducer, initialState)
-	const handleClick = () => {
-		dispatch({type: "plus"})
+	const updateState = (type) => {
+	switch (type) {
+		case "plus":
+			dispatch({ type: "plus" })
+			break;
+		case "plus":
+			dispatch({ type: "plus" })
+			break;
+		case "plus":
+			dispatch({ type: "plus" })
+			break;
+		case "plus":
+			dispatch({ type: "plus" })
+			break;
+	
+		default:return
+			break;
 	}
-	const handleClick2 = () => {
-		dispatch({ type: "minus" })
-	}
-	const handleClick3 = () => {
-		dispatch({type:"changeName"})
-	}
+
 	return (
 		<div>
-			<h1>state: {JSON.stringify(state,null,0)}</h1>
-			<button onClick={handleClick}>plus</button>
-			<button onClick={handleClick2}>minus</button>
+			<h1>state: {JSON.stringify(state,null,1)}</h1>
+			<button onClick={updateState("")}>plus</button>
+			<button onClick={updateState("")}>minus</button>
+			<button onClick={updateState("")}>change name</button>
+			<button onClick={updateState("")}>att random</button>
+			<button onClick={updateState("")}>att random2</button>
+
 		</div>
 	)
+}
 }
