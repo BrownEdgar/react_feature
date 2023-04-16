@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import { BrowserRouter as Router } from 'react-router-dom'
 
-import App from './components/Edgar/Hooks/useContext/App';
+import App from './components/Davit/Hooks/useReducer/App'
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

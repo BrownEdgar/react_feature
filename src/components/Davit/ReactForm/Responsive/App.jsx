@@ -29,6 +29,7 @@ const validationSchema = yup.object({
 
 export default function App() {
 	const [data, setData] = useState([]);
+	
 	const navigate = useNavigate()
 	const handleSubmit = (values, { resetForm }) => {
 		setData([...data, values]);
