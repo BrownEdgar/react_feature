@@ -1,5 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import ROUTES from '../routes/ROUTES'
+
 import "./Navbar.scss"
 
 export default function Navbar() {
@@ -8,21 +10,24 @@ export default function Navbar() {
 			<nav>
 				<ul>
 					<li>
-						<Link to={ROUTES.HOME}>Home</Link>
+						<NavLink 
+						className={({isActive}) => isActive && "active-link"}
+						to={ROUTES.HOME}>Home</NavLink>
 					</li>
 					<li>
-						<Link to={ROUTES.SIGNUP}>SignUp</Link>
+						<NavLink 
+						className={({isActive}) => isActive && "active-link"}
+						to={ROUTES.BLOG}>Blog</NavLink>
 					</li>
 					<li>
-						<Link to={ROUTES.SIGNIN}>SignIn</Link>
+						<NavLink 
+						className={({isActive}) => isActive && "active-link"}
+						to={ROUTES.POSTS}>Posts</NavLink>
 					</li>
 					<li>
-						<Link to={ROUTES.BLOG}>Blog</Link>
-					</li>
-					<li>
-						<Link to={ROUTES.POSTS}>Posts</Link>
-					</li>		<li>
-						<Link to={ROUTES.ABOUT}>About</Link>
+						<NavLink 
+						className={({isActive}) => isActive && "active-link"}
+						to={ROUTES.ABOUT}>About</NavLink>
 					</li>
 				</ul>
 			</nav>
