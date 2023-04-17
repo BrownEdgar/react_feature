@@ -1,9 +1,8 @@
 import {
   ADD_NAME,
+  REPLACE_ID,
   SORT_ARR,
-  ULOAD_POSTS
 } from "./actionTypes";
-
 
 
 
@@ -14,16 +13,27 @@ export const initialState = {
   arr: [154, 42, 1, 87, 695, 36, 2, 10, 39, 9]
 }
 
+const URL = "https://jsonplaceholder.typicode.com/posts?_limit=10 "
+
+
+export const getPosts = async () =>{
+  const response = await fetch(URL);
+  const body = await response.json();
+  
+
+  return initialState.posts.push(body)
+}
+
 export const reducer = (state, action) => {
   switch (action.type) {
-       case ULOAD_POSTS:
-      return {...state, posts:action.payload.posts}
       case ADD_NAME:
 			return  {...state ,developers: [...state.developers, action.payload.message]} ;
       case SORT_ARR:
-        return sort(state);
+      return sort(state);
+      // case REPLACE_ID:
+      // return repId();
       default:
-        return state
+      return state
 
   }
 }
@@ -36,11 +46,7 @@ function sort(state) {
 }
 
 
-
-// Ստեղծել կոճակներ որոնք կանեն հետևյալ գործողությունները
-// - Jsonplaceholder -ից կստանա 10 հատ post և կպահի `posts` զանգվածի մեջ և նկարել էջում
 // - առաջին գործողությունով ստացած 10 հատ post-ի id-ը ջնջել և փոխարենը դնել arr զանգվածի 10 թվերը։
 // - ամեն մի post-ում լինի 'x' կոճակ և այն ՛click՛ի ժամանակ պիտի ջնջի հերթական post-ը,
 
-//https://jsonplaceholder.typicode.com/posts
-// - Ամեն մի գործողությունից հետո(click) `actions` թվային հատկությունը ավելացնել 1 - ով։
+// - Ամեն մի գործողությունից հետո(click) `actions` թվային հատկությունը ավելացնել 1 - ով
