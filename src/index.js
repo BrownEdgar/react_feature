@@ -4,7 +4,7 @@ import "./index.css";
 
  
 
-import App from './components/Arusik/ReactFormHomework/FormHomework2/App.jsx';
+import App from './components/Arusik/Hooks/useReducerHomework/App.jsx';
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
