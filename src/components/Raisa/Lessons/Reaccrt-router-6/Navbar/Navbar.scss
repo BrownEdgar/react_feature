@@ -1,0 +1,29 @@
+header {
+	width: 100%;
+	padding: 10px;
+	height: 80px;
+	background-color: #010607;
+	color: #fff;
+	nav{
+		margin-left: auto;
+		width: 50%;
+		height: 100%;
+
+		ul {
+			list-style-type: none;
+			height: 100%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			width: 100%;
+			li {
+				font-variant: small-caps;
+				font-size: 22px;
+				a{
+					text-decoration: none;
+					color: inherit;
+				}
+			}
+		}
+	}
+}
