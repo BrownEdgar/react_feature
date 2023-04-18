@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(90deg, #7dbaec, #7dbaec, #a65fdd, #a65fdd);
+}
+
+.App {
+  text-align: center;
+  width: 800px;
+  height: 600px;
+  margin: 50px auto;
+  background-color: white;
+
+  h1 {
+    padding: 20px;
+    background: -webkit-linear-gradient(#7dbaec, #7dbaec, #a65fdd, #a65fdd);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  .Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    & > div {
+      padding: 10px;
+      text-align: center;
+
+      .error {
+        color: red;
+      }
+
+      .input {
+        margin: 10px;
+        font-size: 16px;
+      }
+    }
+  }
+}
