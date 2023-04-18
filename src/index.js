@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
  
 
-import App from './components/Arusik/Hooks/useReducerHomework/App.jsx';
+import App from './components/Edgar/Test/App';
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
