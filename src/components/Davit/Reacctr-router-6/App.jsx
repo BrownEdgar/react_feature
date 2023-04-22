@@ -5,7 +5,7 @@ import Blog from './Navbar/Pages/Blog/Blog'
 import Posts from './Navbar/Pages/Posts/Posts'
 import ErrorPage from './Navbar/Pages/404/ErrorPage'
 import { Route , Routes } from 'react-router-dom'
-import "./App.scss"
+import "./App.scss" 
 
 export default function App() {
 return (
