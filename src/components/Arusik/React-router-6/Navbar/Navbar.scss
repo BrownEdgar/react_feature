@@ -1,0 +1,30 @@
+header{
+    width: 100%;
+    padding: 10px;
+    height: 80px;
+    background-color: black;
+    color: white;
+    nav{
+        margin-left: auto;
+        width: 50%;
+        // height: 100%;
+        ul{
+            list-style-type: none;
+            // padding-left: 0;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            li{
+                font-variant: small-caps;
+                font-style: 22px;
+                Link{
+                    text-decoration: none;
+                    color: inherit;
+
+                }
+            }
+        }
+    }
+}
