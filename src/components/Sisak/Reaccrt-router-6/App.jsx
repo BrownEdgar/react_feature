@@ -4,7 +4,8 @@ import Home from './pages/home/Home'
 import Blog from './pages/Blog/Blog'
 import Posts from './pages/Posts/Posts'
 
-import { Navigate, Route, Routes } from 'react-router-dom'
+import {  Route, Routes } from 'react-router-dom'
+
 import ErrorPage from './pages/404/ErrorPage'
 
 import "./App.scss"
