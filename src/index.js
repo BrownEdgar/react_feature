@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
  
 
-import App from './components/Edgar/Hooks/useMemo/App';
+import App from './components/Edgar/jsonServer/App';
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
