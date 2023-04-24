@@ -1,0 +1,35 @@
+button {
+	margin: 20px;
+	padding: 6px 12px;
+	border-radius: 12px;
+	background-color: royalblue;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+
+}
+button:disabled {
+	background-color: grey;
+	color: #ff0404;
+	scale: 0.9;
+}
+
+pre {
+
+	margin: 50px auto;
+	display: block;
+	background-color: #333;
+	padding: 1rem;
+	text-align: left;
+	color: #fff;
+	font-weight: 600;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+li {
+	margin: 20px;
+	font-size: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
