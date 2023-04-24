@@ -1,40 +1,60 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup'
+import { useNavigate } from 'react-router-dom';
+import ROUTES from '../../routes/ROUTES';
 
 import './SignIn.scss'
 
-export default function SignIn() {
-  const [email, setEmail] = useState('');
-	const [information, setInformation] = useState(false);
-  const [password, setPassword] = useState('');
+const initialValues = { email: '', password: '' }
+const validationSchema = Yup.object({
+	email: Yup.string()
+		.required('Required'),
+	password: Yup.string()
+		.required('Required')
+})
 
-	const handleSignInSubmit = (e) => {
-		e.preventDefault();
-		const {email, password} = e.target;
-		setInformation(true)
-		setTimeout(setInformation, 5000, false );
-		e.target.reset()
+export default function SignIn() {
+	const navigate = useNavigate()
+
+	const handleSubmit = async (values, { resetForm }) => {
+		if (values.email === 'admin' && values.password === 'admin') {
+			localStorage.setItem('admin', true)
 		}
-  return (
-    <div className='container'>
-			<div className={`information ${information ? 'show' : ''}`}>
-				<p>Դուք հաջողությամբ մուտք գործեցիք մեր կայք!</p>
+		resetForm()
+	}
+	useEffect(() => {
+		if (!!localStorage.getItem('admin', true)) {
+			navigate(ROUTES.HOME)
+		}
+	}, [])
+
+
+	return (
+		<div className='container'>
+			<div className='content'>
+				<h1>Sign In</h1>
+				<div className='form'>
+					<Formik
+						initialValues={initialValues}
+						validationSchema={validationSchema}
+						onSubmit={handleSubmit}
+						validateOnChange={false}
+						validateOnBlur={true}
+					>
+						<Form>
+							<div>
+								<Field type="text" name='email' id='email' placeholder='Your Email' />
+								<ErrorMessage name="text" component={"p"} />
+								<Field type="password" name='password' id='password' placeholder='Password' />
+								<ErrorMessage name="password" component={"p"} />
+								<button type='submit'>Login</button>
+							</div>
+						</Form>
+					</Formik>
+				</div>
 			</div>
-      <h1>Sign In</h1>
-      <form onSubmit={handleSignInSubmit}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Sign In</button>
-      </form>
-    </div>
-  );
-};
+		</div>
+	)
+}
+
