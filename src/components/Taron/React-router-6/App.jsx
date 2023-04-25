@@ -9,8 +9,9 @@ import Signin from './pages/sign_in/sign_in'
 import Signup from './pages/sign_up/sign_up'
 import { Route, Routes } from 'react-router-dom'
 import ErrorPage from './pages/404/ErrorPage'
-import "./App.scss"
 import ROUTES from './routes/ROUTES'
+
+import "./App.scss"
 
 export default function App() {
 	return (
