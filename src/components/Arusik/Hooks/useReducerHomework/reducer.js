@@ -23,18 +23,25 @@ export const reducer = (state, action) => {
         return sort(state)
       case CHANGE_ID:
         return numbers(state)
+        case DELETE_POST:
+          return handleDeletePost(state,action.payload.id)
     default:
       return state;
   }
 }
 function sort (state){
-  initialState.arr.sort((a,b) => a-b)
+  state.arr.sort((a,b) => a-b)
   return {...state}
 }
 function numbers(state) {
     let a = state.posts.map((post, index) => {
-        initialState.posts.id = initialState.arr[index]
-        return {...post, id: initialState.posts.id}
+      state.posts[index].id = state.arr[index]
+        return post
     })
     return { ...state, posts: a}
+}
+
+function handleDeletePost(state, id) {
+    const filteredPosts = state.posts.filter(post => post.id !== id )
+    return {...state, posts: filteredPosts}
 }
