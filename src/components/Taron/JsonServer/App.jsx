@@ -13,7 +13,6 @@ export default function App() {
 		setPosts(response.data)
 	}
 	useEffect(() => {
-
 		getPosts()
 	}, [])
 
