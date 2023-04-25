@@ -1,23 +1,26 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import Posts from './Posts'
-
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Posts from './Posts';
 
 
 export default function App() {
 
-	const [posts, setPosts] = useState([])
+	const [posts, setPosts] = useState([]);
 
+	async function getPosts() {
+		const response = await axios.get('http://localhost:3004/posts');
+		setPosts(response.data)
+	}
 	useEffect(() => {
-		axios.get("http://localhost:3004/posts")
-		.then(response => setPosts(response.data))
+
+		getPosts()
 	}, [])
-	
+
 
 	return (
 		<div>
-			<h1>Json-server</h1>
-			<Posts posts={posts}/>
+			<h1>JSON-server</h1>
+			<Posts posts={posts} getPosts={getPosts} />
 		</div>
 	)
 }
