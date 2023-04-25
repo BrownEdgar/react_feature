@@ -1,16 +1,16 @@
 import {
-  GET_POSTS,
-  ADD_DEV_NAME,
-  SORT_ARR,
-  CHANGE_ID,
-  DELETE_POST
+	GET_POSTS,
+	ADD_DEV_NAME,
+	SORT_ARR,
+	CHANGE_ID,
+	DELETE_POST,
 } from './actionTypes'
 
 export const initialState = {
-  actions: 0,
-  developers: [],
-  posts: [],
-  arr: [154, 42, 1, 87, 695, 36, 2, 10, 39, 9]
+	actions: 0,
+	developers: [],
+	posts: [],
+	arr: [154, 42, 1, 87, 695, 36, 2, 10, 39, 9]
 }
 
 export const reducer = (state, action) => {
