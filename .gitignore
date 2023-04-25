@@ -24,4 +24,8 @@ yarn-debug.log*
 yarn-error.log*
 
 
+<<<<<<< HEAD
 src\components\Taron\test\*
+=======
+src\components\Arusik\test\*
+>>>>>>> f659ae106b8e916e81170e2db8f1baf93cd77db5
