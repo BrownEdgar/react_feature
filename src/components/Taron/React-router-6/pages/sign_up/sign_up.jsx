@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
+import { useNavigate } from 'react-router-dom'
 import * as yup from "yup"
+import ROUTES from "../../routes/ROUTES"
 
 import './sign_up.scss'
 let count = 0
 
+const initialValues={ username: '', email: '', password: '', confirmpassword: ''}
 
 const validationSchema = yup.object({
     email: yup
@@ -27,19 +30,27 @@ const validationSchema = yup.object({
 
 export default function App() {
     const [users , setUsers] = useState([])
+    const navigate = useNavigate()
+    const handleSubmit=(values, {resetForm}) => {
+        const user = {id: ++count, ...values}
+        setUsers([...users, user])
+        resetForm()
+        localStorage.setItem("user" , JSON.stringify(user))
+        navigate(ROUTES.SIGNIN)
+    }
     
 	return (
         <div className='App'>
-            <div><h1>Sign Up Page</h1></div>
+            <div>
+                <h1>Sign Up Page</h1>
+            </div>
             <div>
             <Formik 
-            initialValues={{ username: '', email: '', password: '', confirmpassword: ''}}
-            onSubmit={(values, {resetForm}) => {
-                const user = {id: ++count, ...values}
-                setUsers([...users, user])
-                validationSchema()
-                resetForm()
-            }}
+                onSubmit={handleSubmit}
+                validateOnBlur = {false}
+                validateOnChange = {true}
+                initialValues={initialValues}
+                validationSchema={validationSchema}
             >
             <Form className='Box'>
                 <div>

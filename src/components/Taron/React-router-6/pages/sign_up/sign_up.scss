@@ -33,7 +33,9 @@
             transition: all 0.5s ease-in-out;
         }
         p{
-            color: red;
+            color: rgb(255, 0, 0);
+            font-size: 15px;
+            text-align: center;
         }
         .text:focus{
             outline: 0;
