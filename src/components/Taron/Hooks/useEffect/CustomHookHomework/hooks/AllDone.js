@@ -1,35 +1,38 @@
-import  { useState } from 'react'
+import { useState } from 'react'
 
 export default function CustomHook(initialstate) {
-    const [value, setValue] = useState(initialstate)
-    
-    const alldone = () => {
-          value.map(elem =>{
-          if(elem.completed === false){
-          elem.completed = true 
-        }
-      })
-      setValue([...value])
-    }
+	const [value, setValue] = useState(initialstate)
 
-    const removeById = (num) => {
-      value.forEach((elem , i) => {
-        if(elem.id === num)
-        value.splice(i , 1)
-      });
-      setValue([...value])
-    }
+	const alldone = () => {
+		const x = value.map(elem => {
+			if (!elem.completed) {
+				elem.completed = true
+			}
+			return elem
+		})
+		setValue(x)
+	}
 
-    const addTodo = () => {
-      const addNewTodo = {
-        "userId": 1,
-        "id": 3,
-        "title": "lorem ipsum dolor sit amet consectetur", 
-        "completed": false
-      }
-      setValue([...value , addNewTodo])
-    }
+	const removeById = (num) => {
 
-  return [value , { alldone , removeById  , addTodo }]     
-  
+		const copy = [...value]
+		copy.forEach((elem, i) => {
+			if (elem.id === num)
+				copy.splice(i, 1)
+		});
+		setValue(copy)
+	}
+
+	const addTodo = () => {
+		const addNewTodo = {
+			"userId": 1,
+			"id": 3,
+			"title": "lorem ipsum dolor sit amet consectetur",
+			"completed": false
+		}
+		setValue([...value, addNewTodo])
+	}
+
+	return [value, { alldone, removeById, addTodo }]
+
 }
