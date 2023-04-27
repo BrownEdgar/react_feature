@@ -21,8 +21,17 @@ export default function CustomHook(initialState) {
         const f = value.filter(todo => todo.id !== id);
 		setValue(f)
     }
+    const alldone = ()=>{
+        value.forEach((todo) =>{
+            if(todo.completed === false){
+              todo.completed = true
+            }
+        })
+      setValue([...value])
+    }
     
-return [value,{removeById,addTodo}]
+    
+return [value,{removeById,addTodo,alldone}]
   
    
 }
