@@ -4,18 +4,19 @@ import {useState,useEffect} from 'react'
 export default function CustomHook(initialState) {
     const [value, setValue] = useState(initialState)
     const [todo, setTodo] = useState()
+    const [todoId, setTodoId] = useState(6)
     useEffect(() => {
 		getTodo()
 	}, [value])
     async function getTodo() {
-        const randomId = Math.floor(Math.random()*(200-6)+6)
-		const response = await axios(`https://jsonplaceholder.typicode.com/todos/${randomId}`)
+    const response = await axios(`https://jsonplaceholder.typicode.com/todos/${todoId}`)
 		setTodo(response.data)
     }
     const addTodo = ()=>{
         const copy = value.slice()
         copy.push(todo)
         setValue(copy)
+        setTodoId(todoId+1)
     }
     const removeById = (id) =>{
         const f = value.filter(todo => todo.id !== id);

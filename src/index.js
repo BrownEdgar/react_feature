@@ -4,11 +4,12 @@ import {BrowserRouter as Router} from "react-router-dom"
 import "./index.css";
 
 
-import App from './components/Ruben/Hooks/CustomHook/App';
+import App from './components/Razmik/Hooks/hooks/App';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-<Router><App />
+<Router>
+    <App />
 </Router>)
 
