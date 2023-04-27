@@ -8,7 +8,7 @@ export default function CustomHook(initialState) {
     
     useEffect(() => {
 		  getTodo()
-	  }, [value])
+	  }, [todoId])
     
     async function getTodo() {
       const response = await axios(`https://jsonplaceholder.typicode.com/todos/${todoId}`)
