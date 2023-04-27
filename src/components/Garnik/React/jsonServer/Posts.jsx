@@ -15,13 +15,8 @@ export default function Posts({ posts, getPosts }) {
 		setIsEdit(!isEdit)
 	}
 
-
-
 	const updatePostTitle = () => {
 		axios.patch(`http://localhost:3004/posts/${ediatablePostId}`, {
-			headers: {
-				'Content-type': 'application/json; charset=UTF-8',
-			},
 			title: postTitleRef.current.value
 		})
 			.then(getPosts)
@@ -33,7 +28,7 @@ export default function Posts({ posts, getPosts }) {
 				return (
 					<div key={elem.id} className='Posts-Item'>
 						{(isEdit && ediatablePostId === elem.id)
-							? <textarea type="text" ref={postTitleRef} placeholder={elem.title} onChange={handleChange} /> : <h1>{elem.title}</h1>}
+							? <textarea type="text" ref={postTitleRef} placeholder={elem.title} /> : <h1>{elem.title}</h1>}
 						<p>{elem.body}</p>
 						<div className="buttons">
 							<Link onClick={() => toggleEdit(elem.id)}>
