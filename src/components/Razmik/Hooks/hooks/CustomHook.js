@@ -5,12 +5,14 @@ export default function CustomHook(initialState) {
     const [value, setValue] = useState(initialState)
     const [todo, setTodo] = useState()
     const [todoId, setTodoId] = useState(6)
+    
     useEffect(() => {
-		getTodo()
-	}, [value])
+		  getTodo()
+	  }, [value])
+    
     async function getTodo() {
-    const response = await axios(`https://jsonplaceholder.typicode.com/todos/${todoId}`)
-		setTodo(response.data)
+      const response = await axios(`https://jsonplaceholder.typicode.com/todos/${todoId}`)
+		  setTodo(response.data)
     }
     const addTodo = ()=>{
         const copy = value.slice()
