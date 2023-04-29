@@ -8,21 +8,20 @@ import axios from 'axios';
 export default function Posts({ posts, getPosts }) {
 	const [isEdit, setIsEdit] = useState(false);
 	const [ediatablePostId, setEdiatablePostId] = useState(null);
-
-	const postTitleRef = useRef(null);
+	const postTitleRef =  useRef(null);
 
 	const toggleEdit = (id) => {
 		setEdiatablePostId(id)
 		setIsEdit(!isEdit)
 	}
 
-	const handleDelete = (id) => {
-		axios.delete(`http://localhost:3004/posts/${id}`).then(getPosts)
-	}
+    const handleDelete =(setDeletePosts) =>{
+        axios.delete(`http://localhost:3004/posts/${setDeletePosts}`).then(getPosts)
+    }
 
 	const updatePostTitle = () => {
 		axios.patch(`http://localhost:3004/posts/${ediatablePostId}`, {
-			title: postTitleRef.current.value
+			title: postTitleRef.current.value 
 		})
 			.then(getPosts)
 			.catch(err => console.log(err))
