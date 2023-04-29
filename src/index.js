@@ -9,8 +9,8 @@ import "./index.css";
 
 import App from './components/Sisak/PaginationHomework/App';
 =======
-import App from './components/Razmik/Paginate/App';
-import App from './components/Taron/PaginationExample/App';
+// import App from './components/Razmik/Paginate/App';
+// import App from './components/Taron/PaginationExample/App';
 >>>>>>> c7bddff56ed7eafc2a8e0b2d74cd929f0d24ddcc
 
 
