@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.albums{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin: 100px auto;
+    width: 60%;
+    min-height: 70vh;
+}
+
+.album{
+    width: 30%;
+    height: 30%;
+    color: #370404;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #0e09a2;
+}
+
+.album img{
+    display: block;
+    width: 100%;
+}
+
+.pagination{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    font-size: 1rem;
+    gap: 5px;
+}
+
+.pagination .page-num{
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: 400;
+}
+
+.pagination .page-num:hover{
+    background-color:tomato;
+    color: white;
+}
+
+.pagination .active{
+    background-color: tomato;
+    color: white;
+}
