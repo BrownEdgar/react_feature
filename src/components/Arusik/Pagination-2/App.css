@@ -1,0 +1,69 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  ul.list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .list-item_md {
+    padding: 0.5rem;
+    border: 1px solid grey;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-bottom: 8px;
+  } */
+  .Pagination{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 30px auto;
+    width: 60%;
+    gap: 5px;
+}
+.Pagination li{
+    padding: 6px 12px;
+    color: rgb(107, 107, 255);
+    font-style: 20px;
+    border: 1px solid teal;
+    background-color: #f3f3f3;
+    border-radius: 6px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+
+}
+.Pagination li a{
+    color: inherit;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+
+}
+.Pagination li:hover{
+    background-color: rgb(77, 77, 255);
+    transition: 0.6;
+}
+.Posts{
+    width: 60%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    list-style: none;
+    text-align: left;
+}
+.Posts li{
+    margin: 12px auto;
+    font-weight: 700;
+    color: black;
+    padding: 6px 12px;
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid teal;
+    border-radius: 6px;
+}

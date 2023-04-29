@@ -4,6 +4,8 @@ import {BrowserRouter as Router} from "react-router-dom"
 import "./index.css";
 
 import App from './components/Razmik/Paginate/App';
+import App from './components/Taron/PaginationExample/App';
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
