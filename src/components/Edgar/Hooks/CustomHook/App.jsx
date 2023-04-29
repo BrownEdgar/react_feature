@@ -3,7 +3,7 @@ import CustomHook from './hooks/CustomHook'
 import CustomFetchApi from './hooks/CustomFetchApi'
 
 export default function App() {
-	const [arr, { sorted, add, check } ] = CustomHook([21,54,69,8,5,30,87,154,27,986])
+	const [arr, { sorted, add, check } ] = CustomHook(522)
 
 	const { data } = CustomFetchApi("https://jsonplaceholder.typicode.com", {
 		target: 'users',

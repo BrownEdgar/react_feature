@@ -26,7 +26,7 @@ export default function CustomHook(initialState) {
     }
     const alldone = ()=>{
         value.forEach((todo) =>{
-            if(todo.completed === false){
+            if(!todo.completed){
               todo.completed = true
             }
         })

@@ -17,8 +17,7 @@ export default function Pagination() {
    } , [])
    const lastPage = perPage * page;
    const currentPosts = posts.slice(lastPage - perPage,lastPage)
-
-   const handleClick = (pageNumber)=>{
+    const handleClick = (pageNumber)=>{
         setPage(pageNumber)
    }
     
