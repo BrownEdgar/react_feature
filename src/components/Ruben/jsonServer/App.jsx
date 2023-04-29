@@ -1,15 +1,25 @@
+import React, { useState, useEffect} from 'react';
 import axios from 'axios';
-import React, {useState, useEffect} formGIT ADD  'React';
+
 
 
 
 export default function App() {
+
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        axios.get()
+        axios.get('https://jsonplaceholder.typicode.com/posts')
+        .then(response => setPosts(response.data))
+        console.log(posts)
     }, [])
+
+
+
   return (
-    <div>JSON server</div>
+    <div>
+      <h1>JSON-server</h1>
+      <posts posts={posts}/>
+    </div>
   )
 }

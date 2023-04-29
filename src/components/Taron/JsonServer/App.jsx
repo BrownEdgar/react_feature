@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import axios from 'axios';
 import Posts from './Posts';
 
@@ -12,15 +12,20 @@ export default function App() {
 		const response = await axios.get('http://localhost:3004/posts');
 		setPosts(response.data)
 	}
-	useEffect(() => {
-		getPosts()
-	}, [])
 
+	const cb = useCallback(getPosts,[])
+
+	const PostsList = useMemo(() => {
+		return <Posts posts={posts} getPosts={cb}/>
+	}, [posts , cb])
+	
+
+	useEffect(() => {getPosts()}, [])
 
 	return (
 		<div>
-			<h1>JSON-server</h1>
-			<Posts posts={posts} getPosts={getPosts}/>
+			<h2>JSON-server</h2>
+			{PostsList}
 		</div>
 	)
 }
