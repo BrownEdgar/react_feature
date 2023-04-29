@@ -2,7 +2,7 @@ import {
     useState
 } from 'react'
 
-export default function CustomHook(initiailState) {
+export default function CustomHook(initiailState = []) {
     const [value, setValue] = useState(initiailState)
     const alldone = () => {
         const coppy = value.slice()
@@ -14,19 +14,18 @@ export default function CustomHook(initiailState) {
     }
 
     function removeById(id) {
-        const coppy = value.slice()
-        const del = coppy.filter((obj) =>
-            obj.id !== id);
-        coppy.splice(del, 1);
-        return coppy;
+     
+			const coppy = value.filter((obj) => obj.id !== id);
+			setValue(coppy)
     }
     const addTodo = () => {
-        setValue([...value, {
-            "userId": 1,
-            "id": 18,
-            "title": "nor title",
-            "completed": false
-        }])
+			const data = {
+				"userId": 1,
+				"id": 18,
+				"title": "nor title",
+				"completed": false
+			}
+        setValue([...value, data ])
     }
 
     return [value, {

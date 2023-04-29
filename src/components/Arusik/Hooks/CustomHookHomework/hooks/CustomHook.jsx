@@ -5,7 +5,7 @@ export default function CustomHook(initialState) {
     
     const AddDone = () => {
      value.forEach((elem) =>{
-              if(elem.completed === false){
+              if(!elem.completed){
                 elem.completed = true
               }   
         })
@@ -13,12 +13,13 @@ export default function CustomHook(initialState) {
       }
 	
       const RemoveById = (num) => {
-        value.forEach((elem, index) =>{
+        const copy = [...value]
+        copy.forEach((elem, index) =>{
           if(elem.id === num){
-            value.splice(index, 1)
+            copy.splice(index, 1)
           }
         })
-        setValue([...value])
+        setValue(copy)
       }
     
       const AddToDo = (title) => {
