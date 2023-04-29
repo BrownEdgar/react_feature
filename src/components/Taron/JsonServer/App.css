@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-h1{
+h2{
     text-align: center;
     margin-top: 20px;
+    font-size: 40px;
 }

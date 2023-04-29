@@ -9,7 +9,6 @@ import axios from 'axios';
 export default function Posts({ posts, getPosts }) {
 	const [isEdit, setIsEdit] = useState(false);
 	const [ediatablePostId, setEdiatablePostId] = useState(null);
-    const [deletePosts, setDeletePosts] = useState(null)
 	const postTitleRef =  useRef(null);
 
 	const toggleEdit = (id) => { 
@@ -21,18 +20,15 @@ export default function Posts({ posts, getPosts }) {
 
 	const updatePostTitle = () => { 
 		axios.patch(`http://localhost:3004/posts/${ediatablePostId}`, {
-			headers: {
-				'Content-type': 'application/json; charset=UTF-8',
-			},
 			title: postTitleRef.current.value 
-		})
+	})
 		.then(getPosts)
 		.catch(err => console.log(err))
 }
 
 
-const deletePost = (setDeletePosts) => { 
-    axios.delete(`http://localhost:3004/posts/${setDeletePosts}`)
+const deletePost = (id) => { 
+    axios.delete(`http://localhost:3004/posts/${id}`)
 		.then(getPosts)
 }
 
