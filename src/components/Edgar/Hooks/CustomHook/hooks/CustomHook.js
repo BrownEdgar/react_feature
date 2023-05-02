@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import  { useState } from 'react'
 
 export default function CustomHook(initialState) {
 	const [value, setValue] = useState(initialState)
@@ -15,9 +15,9 @@ export default function CustomHook(initialState) {
 
 	const check = (num) => {
 		const copy = value.slice()
-		const c = copy.filter(elem => elem < num)
+		const c = copy.filter(elem=> elem < num)
 		console.log(c.length);
-	}
+	  }
 
-	return [value, { sorted, add, check },]
+	return [value, { sorted, add, check},]
 }
