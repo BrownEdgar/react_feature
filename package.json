@@ -15,10 +15,6 @@
     "react-content-loader": "^6.2.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
-<<<<<<< HEAD
-=======
-    "react-paginate": "^8.2.0",
->>>>>>> 1f5fcdba6cceaf2775f145f05cb98f827ee2dcf7
     "react-parallax": "^3.5.1",
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
