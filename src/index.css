@@ -12,3 +12,32 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+
+
+.Posts{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: 20px;
+	flex-wrap: wrap;
+}
+.Posts > div {
+	margin: 6px;
+	border: 2px solid teal;
+	position: relative;
+	width: 30%;
+	padding: 1rem;
+}
+
+.Posts>div span {
+	width: 30px;
+	display: block;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	padding-left: 8px;
+	cursor: pointer;
+	height: 30px;
+	border-radius: 50%;
+	border: 2px solid red;
+}
