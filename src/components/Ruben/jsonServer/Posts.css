@@ -1,0 +1,53 @@
+.Posts{
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid red;
+    display: frid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: auto;
+    grid-gap: 16px;
+}
+
+.Posts-Item{
+    border-radius: 12px;
+    border:2px solid;
+    padding: 1rem;
+    position: relative;
+}
+.Posts > div:nth-child(1) {
+    grid-area: 1/1/3/2;
+}
+.Posts-Item h1 {
+    background-color: black;
+    border: white;
+    padding: 6px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+}
+.Posts-Item p {
+    line-height: 1.6;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 80px;
+}
+.Posts-Item textarea {
+    resize: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 20px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+}
+.buttons{
+    position: absolute;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.buttons a svg {
+    font-size: 30px;
+}
