@@ -1,27 +1,42 @@
-import { createStore } from "redux"
+import { applyMiddleware, configureStore } from "@reduxjs/toolkit";
+import countReducer from "./features/countSlice";
+import dataReducer from "./features/dataSlice";
+import postsReducer from "./features/postsSlice";
+import personReducer from "./features/personSlice";
+import todosReducer from "./features/todoSlice";
+import { ADD_TODO, CHANGE_COUNT } from "./features/actionTypes";
 
-const initialState = {
-    count:0,
-    data:["Reactjs","javascript","sass"],
-    person:{
-        id:1,
-        name:'hovnatan',
-        age:30
-    },
-    posts:[]
-}
-function rootReducer(state,action){
-    switch(action.type){
-        case 'add-count':return {...state,count:state.count + 1};
-        case 'add-angular': return {...state,data:state.data.concat(action.payload.item)}
-        case 'add-posts':return {
-            ...state,
-            posts:action.payload.posts
-        }
-        case 'change-age':return{...state,person:{...state.person,age:action.payload.age}}
-        default:return state
+
+const myFirstMiddleware = (store) => (next) => (action) =>{
+    if(action.type === ADD_TODO){
+       const isExists = store.getState().todos.includes(action.payload.message)
+    if(!isExists){
+        return next(action)
+    } else{
+        store.dispatch({type:CHANGE_COUNT})
     }
+    }else{
+    return next(action)
+}
+    
+    
+}
+const myFirstMiddleware2 = (store) => (next) => (action) =>{
+    console.log('myFirstMiddleware2')
+    return next(action)
+    
 }
 
-const store = createStore(rootReducer,initialState);
-export default store;
+
+
+export default configureStore({
+    reducer:{
+        count:countReducer,
+        data:dataReducer,
+        posts:postsReducer,
+        person:personReducer,
+        todos:todosReducer
+    },
+    middleware:[myFirstMiddleware,myFirstMiddleware2]
+})
+
