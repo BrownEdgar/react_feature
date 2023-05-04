@@ -1,25 +1,22 @@
 import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { CHANGE_AGE, CHANGE_COUNT, FIND_SIX } from './redux/features/actionTypes'
+import Todolist from './components/Todolist'
 
 export default function App() {
 	const count = useSelector(state => state.count)
-const data=useSelector(state => state.data)
-
 	const dispatch = useDispatch()
-	const handleClick = () => { 
-		dispatch({type: "Age"}) 
-	 }
-	const handleClick1 = () => { 
-		dispatch({type:'find_6'})
-	 }
+	
+	const handleClick = () => {
+		dispatch({ type: CHANGE_COUNT })
+	}
 
 	return (
 		<div>
 			<h1>count: {count}</h1>
-			<button onClick={handleClick}>Age</button>
-			<button onClick={handleClick1}>get number of 6</button>
-			
+			<button onClick={handleClick}>change count</button>
+			<Todolist />
 		</div>
 	)
 }
