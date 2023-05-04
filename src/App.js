@@ -1,32 +1,23 @@
-import React from 'react'
-import { useEffect } from 'react';
-import { useDispatch,useSelector } from "react-redux";
-import axios from 'axios';
+import axios from 'axios'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { CHANGE_COUNT, FIND_SIX } from './redux/features/actionTypes'
+import Todolist from './components/Todolist'
 
-export default function App(data) {
+export default function App() {
 	const count = useSelector(state => state.count)
+
 	const dispatch = useDispatch()
 	const handleClick = () => {
-		dispatch({type: "add count"})
+		dispatch({ type: CHANGE_COUNT })
 	}
-	const handleClick1 = () => {
-		dispatch({ type: "add-elem", payload: {item: "d"} })
-	}
-useEffect(() => {
-	axios("https://jsonplaceholder.typicode.com/posts")
-	.then(response => dispatch({
-		tyoe: "add-posts",
-		payload:{
-			posts:response.data
-		}
-	}))
-},[])
+
 	return (
 		<div>
-			<h1>React-Redux| count:{count} </h1>
-			<h1>{JSON.stringify(data)}</h1>
-			<button onClick={handleClick}>add count</button>
-			<button onClick={handleClick1}>add</button>
+			<h1>count: {count}</h1>
+			<button onClick={handleClick}>CHANGE COUNT</button>
+			<Todolist />
+
 		</div>
 	)
 }
