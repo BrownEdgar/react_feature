@@ -1,26 +1,17 @@
-import { createStore } from "redux"
+import { configureStore } from "@reduxjs/toolkit"
+import countReducer from "./features/countSlice";
+import dataReducer from "./features/dataSlice";
+import postsReducer from "./features/postsSlice";
+import personReducer from "./features/personSlice";
 
-
-const initialState = {
-	count: 0,
-	data:["a","b","c"],
-	person: {
-		id: 1,
-		name: "Hovnatan",
-		age: 34
+export default configureStore({
+	reducer: {
+		count: countReducer,
+		data: dataReducer,
+		posts: postsReducer,
+		person: personReducer
 	}
-}
+})
 
-function rootReducer(state,action) {
-	switch (action.type) {
-	case "add count": return {...state, count: state.count + 1}
-	case "add-elem": return {
-		...state,
-		data: state.data.concat(action.payload.item)}
-		case "add-posts": 
-		default: return state
-	}
-}
 
-const store = createStore(rootReducer, initialState)
-export default store;
+
