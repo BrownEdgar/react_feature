@@ -1,0 +1,6 @@
+export const ADD_COUNT = "add-count"
+export const ADD_LETER = "add-letter"
+export const ADD_POSTS = "add-posts"
+export const ADD_AGE = "add-age"
+export const FIND_NUMBER = "find-number"
+export const ADD_TODO = "add-todo"
