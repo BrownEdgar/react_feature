@@ -1,5 +1,6 @@
-export const CHANGE_AGE = "CHANGE_AGE"
-export const CHANGE_COUNT = "ADD_COUNT"
-export const ADD_ANGULAR = 'ADD_ANGULAR'
-export const ADD_POSTS = 'ADD_POSTS'
-export const ADD_TODO = 'ADD_TODO'
+export const ACTIONS = {
+    ADD_POSTS : 'ADD_POSTS',
+    ADD_COMMENTS:'ADD_COMMENTS',
+    ADD_USERS:"ADD_USERS",
+    ADD_TODOS:"ADD_TODOS"
+} 
