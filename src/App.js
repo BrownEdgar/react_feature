@@ -1,16 +1,14 @@
-import Child from "./components/Child"
+import React from "react";
+import Users from "./components/Users";
+import Posts from "./components/Posts";
+import Todos from "./components/Todos";
 
-import './App.css';
-
-// function App() {
-// 	const arr = ['html', 'css', 'Java Script', 'React.js', 'Node.js', 'Python' ];
-// 	return (
-// 		<div className="App">
-// 			<h1>Welcome to my world</h1>
-// 			<Child title="abcd" arr={arr}/>
-		
-// 		</div>
-// 	);
-// }
-
-export default App;
+export default function App() {
+  return (
+    <div>
+      <Posts />
+      <Users />
+      <Todos />
+    </div>
+  );
+}
