@@ -17,7 +17,7 @@ export default function TodoList() {
   return (
     <div>
         <form onSubmit={handleSubmit}>
-            <input type="text" placeholder='add totdo text' required />
+            <input type="text" placeholder='add todo text' required />
             <input type="submit" value='add' />
         </form>
         <pre>

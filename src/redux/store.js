@@ -11,12 +11,11 @@ const myFirstMiddleware = (store) => (next) => (action) => {
     const isExists = store.getState().todos.includes(action.payload.message);
     if (!isExists) {
       return next(action);
-    }else{
-      store.dispatch({type: ADD_COUNT})
+    } else {
+      store.dispatch({ type: ADD_COUNT });
     }
-    
-  }else{
-    return next(action)
+  } else {
+    return next(action);
   }
 };
 
