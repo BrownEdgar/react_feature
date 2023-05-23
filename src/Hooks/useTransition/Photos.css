@@ -1,0 +1,15 @@
+.Photos{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: space-evenly;
+    
+}
+.Photos>div >img{
+    width: 100%;
+}
+input{
+    font-size: 20px;
+    margin:30px;
+    padding: 1rem;
+}
