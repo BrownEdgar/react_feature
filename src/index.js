@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 
-import App from "./components/Arusik/FetchApi/App";
+import App from "./components/Edgar/Hooks/useTransition/App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
