@@ -1,0 +1,32 @@
+[{
+    "id": 1,
+    "question": "Point out the differences between React Native and ReactJS.",
+    "answer": "React and ReactJS are the same and React Native is built on top of React. Due to their differences, React is used to build dynamic and responsive user interfaces for web applications while React Native is designed to build applications as mobile apps.",
+    "isShow": false
+},
+{
+    "id": 2,
+    "question": "What is the difference between element and component?",
+   "answer": "A React element is a simple and immutable object created to represent a DOM node. Being immutable means that it cannot be changed after it has been created since it is mapped to the DOM. On the other hand, React component is mutable and produces JSX output after rendering.",
+   "isShow": false
+},
+{
+    "id": 3,
+    "question": "What is props.children?",
+    "answer": "The props.children attribute contains information about all the content of a component that has start and end tags. These child elements refer to all elements that are defined within the current component, and may be one, many, or none.",
+   "isShow": false
+},
+{
+   "id": 4,
+   "question": "What is JSX?",
+    "answer": "JSX stands for JavaScript XML. It's a JavaScript syntax extension that allows you to write HTML inside responsive code. The browser doesn't understand JSX anyway, so React has to convert it to readable HTML.",
+    "isShow": false
+},
+{
+    "id": 5,
+    "question": "what is React Hooks?",
+    "answer": "React hooks are a feature of functional components that allow you to access various React features such as state data and render updates. It was introduced in React 16.8.",
+    "isShow": false
+}
+
+]

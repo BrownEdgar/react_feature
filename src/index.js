@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from './Hooks/useTransition/App';
+import App from './components/Krknutyun/App';
 
 import "./index.css";
 

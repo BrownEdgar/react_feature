@@ -3,9 +3,6 @@ import React from 'react'
 import { useEffect,useState,useTransition } from 'react'
 import Photos from './Photos'
 
-
-
-
 export default function App() {
     const [photos, setPhotos] = useState([])
     const [searchValue, setSearchValue] = useState('')
