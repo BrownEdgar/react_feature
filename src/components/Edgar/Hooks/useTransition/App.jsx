@@ -27,12 +27,10 @@ export default function App() {
 	
 	return (
 		<div>
-
 			<h1>useTransition hook</h1>
 			<form onSubmit={handleSubmit}>
 				<input type="text" onChange={handleChange} />
 			</form>
-
 			{isPending && <h1>Loading...</h1>}
 			<Photos photos={dataFilter(photos, searchValue)} />
 		</div>
