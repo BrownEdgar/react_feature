@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Users({users}) {
   return (
-    <ul>
+    <ul className='main-list'>
         {users.map((user => {
             return(
                 <li key = {user.id}>
@@ -11,7 +11,6 @@ export default function Users({users}) {
                 </li>
             )
             }))}
-
     </ul>
   )
 }
