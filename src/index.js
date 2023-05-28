@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from './components/Krknutyun/App';
+import App from './test/App';
 
 import "./index.css";
 

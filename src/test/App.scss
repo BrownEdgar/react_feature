@@ -1,0 +1,28 @@
+.main{
+    width: 1140px;
+    height: 100vh;
+    margin:0 auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    form{
+        width: 70%;
+        margin:20px auto;
+        div{
+            input,select{
+                width: 100%;
+                margin:10px auto;
+                padding: 1rem;
+                border:0;
+                font-size: 18px;
+                
+                input[type='submit']{
+                    background-color: green;
+                    
+                }
+            }
+        }
+    }
+
+
+}
