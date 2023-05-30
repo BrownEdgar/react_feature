@@ -1,16 +1,41 @@
 import React from 'react'
+import { useMemo } from 'react'
+import { useState } from 'react'
+
+import './App.scss'
 
 export default function Users({users}) {
-  return (
-    <ul className='main-list'>
-        {users.map((user => {
+  const [value, setValue] = useState()
+  const filterChange = (e) => {
+    setValue(e.target.value)
+  }
+  const filterUsers = useMemo(() =>
+    users.filter((user) =>user.langueges === value),
+    [users,value]
+  ) 
+
+  return (<div className='main-user'>
+            <select className='user-select' onChange={filterChange} name='langueges' id='langueges' >
+                <option value=''></option>
+                <option value='htmlcss'>Html & Css</option>
+                <option value='javascript'>Javascript</option>
+                <option value='react'>React</option>
+                <option value='typescript'>Typescript</option>
+                <option value='python'>Python</option>
+            </select>
+      <ul className='main-list'>
+        {filterUsers
+          .map((user => {
             return(
                 <li key = {user.id}>
                     <span>{user.registeredDate.format("llll")}</span>
                    <span>{user.name}</span>
+                   <span>{user.langueges}</span>
                 </li>
             )
-            }))}
+            }))
+            }
     </ul>
+    </div>
   )
 }
