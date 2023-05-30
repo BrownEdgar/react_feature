@@ -1,0 +1,5 @@
+export const HTML = "#533ea9"
+export const Javascript = "#fccb00"
+export const React_js = "#585028"
+export const Typescript = "#d6c77d"
+export const Python = "#c7305b"

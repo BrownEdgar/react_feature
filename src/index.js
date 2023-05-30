@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 
-import App from "./Test/App";
+import App from "./components/Davit/RegisterForm/App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
