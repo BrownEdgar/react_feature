@@ -14,11 +14,11 @@
 
 .box {
   margin: 0 20px;
-  /* display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 10px; */
-  display: flex;
-  flex-direction: column;
+   display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 10px; 
+  /* display: flex;
+  flex-direction: column; */
 }
 
 h1 {
