@@ -9,14 +9,14 @@ export default function Users({users}) {
   const filterChange = (e) => {
     setValue(e.target.value)
   }
-  const filterUsers = useMemo(() =>
-    users.filter((user) =>user.langueges === value),
-    [users,value]
-  ) 
+  const filterUsers = useMemo(() =>{
+    return value ? users.filter((user) =>user.langueges === value): users ;
+  },
+   [users,value]) 
 
   return (<div className='main-user'>
             <select className='user-select' onChange={filterChange} name='langueges' id='langueges' >
-                <option value=''></option>
+                <option value='' selected disabled></option>
                 <option value='htmlcss'>Html & Css</option>
                 <option value='javascript'>Javascript</option>
                 <option value='react'>React</option>
@@ -27,7 +27,7 @@ export default function Users({users}) {
         {filterUsers
           .map((user => {
             return(
-                <li key = {user.id}>
+                <li key = {user.id} className={`item-${user.langueges}`}>
                     <span>{user.registeredDate.format("llll")}</span>
                    <span>{user.name}</span>
                    <span>{user.langueges}</span>

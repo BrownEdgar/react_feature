@@ -76,3 +76,22 @@
 		font-size: 16px;
 	}
 }
+
+.item{
+	&-react{
+		background-color: rgb(102, 5, 5);
+		color:#fff;
+	}
+	&-javascript{
+		background-color: aqua;
+	}
+	&-htmlcss{
+		background-color: rgb(2, 69, 2);
+	}
+	&-typescript{
+		background-color: gray;
+	}
+	&-python{
+		background-color: #798306;
+	}
+}
