@@ -1,21 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react'
+import classNames from 'classnames'
 
+import "./App.scss"
 
 export default function App() {
-const [products, setProducts] = useState([])
-
-	useEffect(() => {
-		const p = localStorage.getItem('products') ?? JSON.parse(localStorage.getItem('products'));
-		if (p) {
-			setProducts(p)
-		}
-		return () => localStorage.removeItem('products')
-	}, [])
-	
-
+	const [isActive, setIsActive] = useState(false)
 	return (
 		<div>
-			{JSON.stringify(products)}
+			<h1>Animation in react</h1>
+			<hr />
+			<div className={classNames('box', {
+				active: isActive
+			})}>
+				<h2>Animation box</h2>
+			</div>
+			<hr />
+			<button onClick={() => setIsActive(true)}>start</button>
+
 		</div>
 	)
 }

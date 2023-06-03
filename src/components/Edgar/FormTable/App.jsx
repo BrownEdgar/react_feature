@@ -25,7 +25,6 @@ export default function App() {
 			<div className="wrapper-table">
 				<Users
 					users={users}
-
 				/>
 			</div>
 		</div>
