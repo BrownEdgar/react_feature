@@ -1,4 +1,5 @@
 import React from 'react'
+import '../Images/Armani1.jpg'
 
 import style from "./Watch.module.css"
 

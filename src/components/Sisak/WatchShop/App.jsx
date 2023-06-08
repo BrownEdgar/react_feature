@@ -8,7 +8,7 @@ export default function App() {
 	const [watches, setWatches] = useState(data);
 	const handleDelete = (id) => {
 		const f = watches.filter(watch => watch.id !== id);
-		setProducts(f)
+		setWatches(f)
 	 }
 	 
 	 return (

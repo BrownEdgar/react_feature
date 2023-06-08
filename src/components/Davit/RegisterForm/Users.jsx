@@ -6,9 +6,9 @@ export default function Users({users}) {
 				{
 				users.map((user) => {
 						return (
-							<li key={user.id}>
+							<li  key={user.id}>
 								<span className='date'>at {user.registeredDate.calendar()}</span>
-								<span>{user.name}</span>
+								<span>{user.name} | {user.languages} | {user.email}</span>
 							</li>
 					)
 					})
