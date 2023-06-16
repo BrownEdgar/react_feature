@@ -10,6 +10,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <Router>
-    <App />
+    <App name={"class component"}/>
   </Router>
 );
