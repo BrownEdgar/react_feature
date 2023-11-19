@@ -1,22 +1,49 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import classNames from 'classnames'
 
 import "./App.scss"
 
 export default function App() {
-	const [isActive, setIsActive] = useState(false)
+	const [time, setTime] = useState(new Date())
+	const [intervalId, setIntervalId] = useState(null)
+
+
+	const startTimer = () => {
+		const interval = setInterval(() => {
+			setTime(new Date())
+		}, 1000);
+		setIntervalId(interval)
+	}
+
+	const stopTimer = () => {
+		clearInterval(intervalId)
+	}
+	useEffect(() => {
+		startTimer()
+	}, [])
+
 	return (
 		<div>
-			<h1>Animation in react</h1>
-			<hr />
-			<div className={classNames('box', {
-				active: isActive
-			})}>
-				<h2>Animation box</h2>
+			<div>
+				<div className="time">
+					<h1>{time.toLocaleTimeString()}</h1>
+				</div>
+				<div className="buttons">
+					<button onClick={stopTimer}>stop</button>
+					<button onClick={startTimer}>Start</button>
+				</div>
 			</div>
-			<hr />
-			<button onClick={() => setIsActive(true)}>start</button>
-
 		</div>
 	)
 }
+
+// uikit
+// REST API
+// all hooks
+// vite
+// graphQL
+// typeSCRIPT
+// O(n) algoritms
+// findIndex map,filter 
+// Sliider slick slider
+ 
