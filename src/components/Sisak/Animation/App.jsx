@@ -10,13 +10,13 @@ export default function App() {
         <h1>Animation in react</h1>
         <hr />
         <div className={classNames('box', {
-            actice: isActive
+            actice: active
         })}></div>
         <div className='box'>
             <h2>Animation box</h2>
         </div>
         <hr />
-        <button onClick={() => isActive}>Start</button>
+        <button onClick={() => active}>Start</button>
     </div>
   )
 }

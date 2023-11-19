@@ -19,7 +19,7 @@ export default function App() {
 				watches.map((elem) => {
 				return <Watch watch={elem} key={elem.id} handleDelete={handleDelete}/>
 			}))
-		  : <h1>Այ ախպեր սաղ ջնջել ես, էլ ինչին ես սպասում?</h1>}
+		  : <h1>You are delete all</h1>}
 		</div>
 	)
 }

@@ -33,12 +33,12 @@ const handelBlur = (e)=>{
   return (
     <div className='App'> 
     <div className={`alert ${alert ? 'show' : ''}`} >
-      <p>" A customer service representative from Khaninyan will contact you shortly.</p>
+      <p>" A customer service representative from Poghosyan will contact you shortly.</p>
     </div>
        <form onSubmit={handelSubmit}>
        <div>
        <h1>Contact Us</h1>
-        <h2>If you have any problem or question related to our services and their quality, you use our online help service, send us an e-mail at Khaninyan@js.am , visit any JS service center and get in touch with us on our Facebook page. </h2>
+        <h2>If you have any problem or question related to our services and their quality, you use our online help service, send us an e-mail at Poghosyansisak@gmail.com , visit any JS service center and get in touch with us on our Facebook page. </h2>
 
         <input type="text"  name="name" id="name" defaultValue='Name' required/>
         <input type="email"  name='email' id='email' defaultValue='Email' onBlur={handelBlur} required/>
