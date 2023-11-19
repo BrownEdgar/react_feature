@@ -1,0 +1,47 @@
+.box {
+	background-color: royalblue;
+	padding: 10px;
+	border-radius: 12px;
+	color: #fff;
+	text-align: center;
+	width: 300px;
+	height: 300px;
+	margin: 20px;
+
+}
+
+.box.active{
+	animation: anima 4s cubic-bezier(.06, 1.43, 1, -0.6) 0.5s infinite alternate both;
+}
+
+@keyframes anima {
+	0%{
+
+		transform: translate(0px) rotate(0);
+	}
+	
+	
+	100%{
+		border-radius: 50%;
+		opacity: 1;
+		transform: translate(600px) rotate(500deg);
+	
+	}
+}
+
+button {
+	padding: 12px 24px;
+	border-radius: 14px;
+	background: transparent;
+	border: 2px solid teal;
+	font-weight: 700;
+	cursor: pointer;
+	margin: 20px;
+	transition: 0.3s;
+}
+button:hover {
+	background-color: greenyellow;
+	color: #fff;
+	scale: 1.1;
+	transition: 0.3s;
+}
